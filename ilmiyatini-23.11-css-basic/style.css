@@ -1,0 +1,163 @@
+#navigation-bar {
+    position: fixed;       /* Menetapkan posisi bilah navigasi pada tampilan */
+    background-color: #000; /* Warna latar belakang bilah navigasi */
+    color: #fff;           /* Warna teks pada bilah navigasi */
+    padding: 7px;          /* Padding di sekitar konten di dalam bilah navigasi */
+    width: 100%;           /* Lebar penuh dari tampilan */
+    z-index: 1000;         /* Menetapkan urutan tumpukan bilah navigasi */
+}
+
+#seg-bar__logo svg {
+    fill: #fff;            /* Mengisi logo SVG dengan warna putih */
+    width: 130px;          /* Menetapkan lebar logo SVG */
+    height: auto;          /* Mengizinkan ketinggian menyesuaikan secara otomatis */
+}
+
+#logo-aja {
+    color: #fff;           /* Warna teks logo */
+    text-decoration: none; /* Menghapus garis bawah dari logo */
+}
+
+#logo-aja:visited {
+    color: #fff;           /* Warna teks logo yang telah dikunjungi */
+}
+
+#navigation-bar #seg-bar__main .ini-link {
+    color: #fff;           /* Warna teks dari tautan navigasi utama */
+    text-decoration: none; /* Menghapus garis bawah dari tautan navigasi utama */
+}
+
+#navigation-bar #seg-bar__main .ini-link:visited {
+    color: #fff;           /* Warna teks dari tautan navigasi utama yang telah dikunjungi */
+}
+
+#navigation-bar #seg-bar__main .ini-link:hover {
+    text-decoration: underline; /* Memberi garis bawah pada tautan navigasi utama saat dihover */
+}
+
+#seg-txt__default li {
+    display: inline-block; /* Menampilkan elemen daftar secara horizontal */
+    margin-right: 20px;    /* Menambahkan spasi antara elemen daftar */
+    font-size: small;      /* Menetapkan ukuran font elemen daftar */
+}
+
+#seg-bar__search {
+    position: relative;    /* Menetapkan posisi bilah pencarian relatif terhadap posisi normalnya */
+}
+
+#seg-bar__search input {
+    width: 390px;          /* Menetapkan lebar kolom input pencarian */
+}
+
+.rfloat {
+    float: right;          /* Melayangkan elemen ke kanan */
+}
+
+.seg-bar-search__selSearchButton {
+    position: absolute;    /* Menetapkan posisi tombol pencarian secara absolut dalam wadahnya */
+    right: 5px;            /* Menetapkan jarak ke kanan tombol pencarian */
+    top: 50%;              /* Menetapkan posisi tombol pencarian secara vertikal di tengah */
+    transform: translateY(-50%); /* Menyesuaikan posisi vertikal setelah translasi */
+    border: none;          /* Menghapus batas dari tombol pencarian */
+    cursor: pointer;       /* Menetapkan kursor menjadi tanda penunjuk saat dihover */
+}
+
+
+.cms-usp-block-container {
+    font-size: 12px;       /* Ukuran font pada kontainer blok */
+    width: 1280px;         /* Lebar kontainer blok */
+    margin: 0 auto;        /* Membuat margin atas dan bawah 0 dan mengatur margin sisi menjadi otomatis (center) */
+    padding: 8px 0px;       /* Padding atas dan bawah 8px, padding sisi 0px */
+    padding-top: 60px;      /* Padding atas tambahan sebesar 60px */
+    display: flex;         /* Menggunakan model tata letak flexbox */
+    justify-content: space-evenly; /* Membuat ruang merata antara elemen-elemen di dalam kontainer */
+    align-items: center;    /* Memusatkan elemen secara vertikal di dalam kontainer */
+}
+
+.cms-usp-block-container a {
+    text-decoration: none; /* Menghapus garis bawah dari tautan dalam blok kontainer */
+}
+
+.cms-usp-block-container a:hover {
+    cursor: pointer;       /* Menetapkan kursor menjadi tanda penunjuk saat dihover pada tautan */
+    opacity: 0.6;          /* Mengurangi kejelasan saat dihover pada tautan */
+}
+
+
+.produk-original {
+    background-position: 0 -5px; /* Posisi latar belakang berupa gambar sprite pada koordinat (0, -5px) */
+    width: 30px;                 /* Lebar elemen */
+    height: 30px;                /* Tinggi elemen */
+}
+
+
+
+.cms-usp-name {
+    float: left;                        /* Melayangkan elemen ke kiri */
+    margin-left: 3px;                   /* Menambahkan margin sebelah kiri sebesar 3px */
+    font-family: 'Apercu', arial, sans-serif; /* Menetapkan jenis font */
+    font-size: 10px;                    /* Menetapkan ukuran font */
+    text-transform: uppercase;          /* Mengonversi teks menjadi huruf kapital */
+    padding-top: 0px;                   /* Padding atas sebesar 0px */
+    display: inline-flex;               /* Menggunakan model tata letak inline-flex */
+    -webkit-box-orient: horizontal;    /* Mengatur orientasi kotak menjadi horizontal pada browser WebKit */
+}
+
+
+
+.usp-sprite {
+    background-image: url('https://static-id.zacdn.com/cms/homepage/cms-usp-sprite_march2018.png'); /* Menetapkan gambar latar belakang dari sprite */
+    background-repeat: no-repeat;      /* Mencegah pengulangan gambar latar belakang */
+    display: block;                    /* Menetapkan elemen sebagai elemen blok */
+    float: left;                       /* Melayangkan elemen ke kiri */
+}
+
+
+.cms-usp-separator {
+    float: left;      /* Menempatkan elemen di sebelah kiri */
+    width: 12px;       /* Menetapkan lebar elemen sebesar 12px */
+    height: 30px;      /* Menetapkan tinggi elemen sebesar 30px */
+}
+
+
+
+.icon_usp_zaloranow {
+    width: 40px; /* Menetapkan lebar elemen sebesar 40px */
+    height: 19px; /* Menetapkan tinggi elemen sebesar 19px */
+    background-position: -3px; /* Menyesuaikan posisi latar belakang dengan menggesernya ke kiri sejauh -3px */
+    background-size: 40px; /* Menetapkan ukuran latar belakang sebesar 40px */
+    background-image: url('https://static-sg.zacdn.com/cms/2023/ZALORA-VIP/USP-BAR-ZALORA-VIP.png'); /* Menetapkan gambar latar belakang dari URL yang diberikan */
+    background-repeat: no-repeat; /* Mencegah pengulangan gambar latar belakang */
+}
+
+
+.cms-app-badge {
+    background: #5C5C5C;        /* Warna latar belakang badge */
+    font-size: 10px;            /* Ukuran font pada badge */
+    display: flex;              /* Menggunakan model tata letak flexbox */
+    font-family: Apercu, Arial, sans-serif; /* Menetapkan jenis font */
+    align-items: center;        /* Memusatkan elemen secara vertikal di dalam badge */
+    margin-left: auto;          /* Menempatkan badge sejauh mungkin ke kiri dari wadah induknya */
+    margin-right: 0px;          /* Menempatkan badge sejauh mungkin ke kanan dari wadah induknya */
+    margin-top: -2px;           /* Menyesuaikan posisi badge ke atas sejauh -2px */
+    opacity: 0.8;               /* Tingkat kejelasan badge */
+    padding-top: 7px;           /* Padding atas sebesar 7px */
+    padding-bottom: 6px;        /* Padding bawah sebesar 6px */
+    padding-left: 15px;         /* Padding kiri sebesar 15px */
+    padding-right: 8px;         /* Padding kanan sebesar 8px */
+    color: #fff;                /* Warna teks pada badge */
+    border-radius: 6px;         /* Menambahkan sudut bulat pada badge */
+    transition: all .3s ease-out; /* Menambahkan efek transisi halus untuk semua perubahan pada badge */
+}
+
+
+.cms-app-badge:hover {
+    cursor: pointer;       /* Menetapkan kursor menjadi tanda penunjuk saat dihover pada badge */
+    opacity: 0.6;          /* Mengurangi kejelasan saat dihover pada badge */
+}
+
+/* Gaya untuk kelas tertentu */
+.cms-app-icon {
+    margin-top: -4px;
+    padding-left: 6px;
+}
