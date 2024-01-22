@@ -7,9 +7,9 @@
     z-index: 1000;         /* Menetapkan urutan tumpukan bilah navigasi */
 }
 
-#seg-bar__logo svg {
+#seg-bar__logo img{
     fill: #fff;            /* Mengisi logo SVG dengan warna putih */
-    width: 130px;          /* Menetapkan lebar logo SVG */
+    width: 50px;          /* Menetapkan lebar logo SVG */
     height: auto;          /* Mengizinkan ketinggian menyesuaikan secara otomatis */
 }
 
@@ -37,7 +37,7 @@
 
 #seg-txt__default li {
     display: inline-block; /* Menampilkan elemen daftar secara horizontal */
-    margin-right: 20px;    /* Menambahkan spasi antara elemen daftar */
+    margin-right: 25px;    /* Menambahkan spasi antara elemen daftar */
     font-size: small;      /* Menetapkan ukuran font elemen daftar */
 }
 
@@ -160,4 +160,39 @@
 .cms-app-icon {
     margin-top: -4px;
     padding-left: 6px;
+}
+.cms-section-heading {
+    text-transform: none;
+    font-size: 28px;
+    padding-bottom: 0px;
+    border-bottom: 0px;
+}
+.cms-third{float: left; width: 33.3%;}
+.white-box {
+    position: absolute;
+    z-index: 2;
+    width: 250px;
+    background: #FFF;
+    color: #000;
+    line-height: 1.5;
+    font-family: Apercu;
+    font-weight: 600;
+    text-align: center;
+    padding: 12px;
+    margin-top: 320px;
+    margin-left: -293px;
+    font-size: 14px;
+}
+.cms-gender div:hover span {
+    background: #000;
+    color: #FFF;
+}
+.cms-gender a:hover span {
+    background: #000;
+    color: #FFF;
+}
+
+.mx-auto {
+    margin-left: auto;
+    margin-right: auto
 }
