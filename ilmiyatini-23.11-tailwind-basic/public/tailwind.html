@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>E-commerce designed referensi Ani Gulordava (dribbble)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -13,7 +14,7 @@
     </header>
     <header>
         <div class="flex items-center text-black w-full border-b-2 border-inherit justify-between overflow-auto p-1">
-            <img class="relative w-16 ml-10" src="logo-3.png" alt="logo-ilCommerce">
+            <img class="relative w-16 ml-20" src="logo-3.png" alt="logo-ilCommerce">
             <nav class="mt-2">
                 <ul class="flex text-base font-sans">
                     <li class="mx-4">
@@ -48,9 +49,9 @@
                     type="text"
                     id="search-input"
                     placeholder="Search for products or brands..."
-                    class="w-250 p-2 text-xs border border-gray-300 rounded outline-none bg-gray-200 focus:border-yellow-500">
+                    class="w-64 p-2 text-xs border border-gray-300 rounded outline-none bg-gray-200 focus:border-yellow-500">
                 </form>
-              <span id="user-tools" class="flex items-center mr-10">
+              <span id="user-tools" class="flex items-center mr-20">
                 <span class="mr-2 hover:bg-amber-300 rounded-md p-1">
                   <button class="flex items-center">
                     <img src="user.png" id="sign-in-icon" alt="logo user" class="w-4 mr-1">
@@ -69,8 +70,8 @@
     </header>
     <section>
         <div class="flex font-sans mt-4 mx-4 border border-gray-200 p-4 bg-amber-100 rounded-md">
-            <div class="flex-none w-72 relative bg-slate-50">
-                <img src="smeg-1.png" alt="" class="absolute inset-0 w-full h-auto items-center mt-10 ">
+            <div class="flex-none w-72 relative bg-slate-50 overflow-auto hover:scale-105 hover:shadow-md transition duration-300">
+                <img src="smeg-1.png" alt="" class="absolute inset-0 w-full h-auto items-center mt-10">
             </div>
             <form class="flex-auto p-6">
                 <div class="flex flex-wrap">
@@ -82,6 +83,15 @@
                     </div>
                     <div class="w-full flex-none text-sm font-medium text-slate-700 mt-2">
                       In stock
+                    </div>
+                    <div class="w-full flex-none text-sm font-medium text-slate-700 cursor-pointer">
+                        <div class="rating mt-2 text-xs">
+                            <i class="fas fa-star text-yellow-500"></i>
+                            <i class="fas fa-star text-yellow-500"></i>
+                            <i class="fas fa-star text-yellow-500"></i>
+                            <i class="fas fa-star text-yellow-500"></i>
+                            <i class="far fa-star text-gray-400 hover:text-yellow-500 transition"></i>
+                          </div>
                     </div>
                     <div class="w-full flex-none text-base font-light text-slate-700 mt-2">
                         <p>Brand : SMEG</p>
@@ -101,7 +111,7 @@
                     <button class="h-10 px-6 font-semibold rounded-md border border-slate-200 text-slate-900 bg-amber-300 transition duration-300 ease-in-out transform hover:scale-105" type="button">
                         Add to bag
                     </button>
-                    <button class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border border-slate-300 hover:text-red-500 " type="button" aria-label="Like">
+                    <button class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border border-slate-300 hover:text-red-500  hover:border-red-500" type="button" aria-label="Like">
                         <svg width="20" height="20" fill="currentColor" aria-hidden="true">
                           <path fill-rule="evenodd" clip-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
                         </svg>
@@ -128,85 +138,99 @@
             </div>
         </div>
         <div class="m-20">
-            <div class="mt-6 grid grid-cols-5 gap-x-20 gap-y-10 mx-auto">
-                <div class="group relative border border-gray-200 rounded-md group-hover:opacity-75 mx-4">
-                    <div class="relative aspect-h-1 aspect-w-1 w-full overflow-hidden">
+            <div class="grid grid-cols-5 gap-x-5 gap-y-5 mx-auto">
+                <div class="group relative">
+                    <div class="border border-gray-200 rounded-md group-hover:scale-110 transition-transform mx-4 overflow-hidden duration-300">
+                        <div class="relative aspect-h-1 aspect-w-1 w-full overflow-hidden">
     
-                        <img src="bowl.jpeg" alt="" class="h-full w-full object-cover object-center">
-    
-                        <button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black text-white px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            Add to Cart
-                          </button>
+                            <img src="bowl.jpeg" alt="" class="h-full w-full object-cover object-center mb-2">
+        
+                            <button class="absolute text-xs top-40 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-amber-300 text-white px-3 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                        <h3 class="text-sm text-gray-700 mx-4 mt-8">
+                            <a href="#">
+                                SMEG SMB401 Stainless Steel Bowl
+                            </a>
+                        </h3>
+                        <p class="text-sm font-medium text-gray-900 p-4 mb-4">$125</p>
                     </div>
-                    <h3 class="text-sm text-gray-700 mx-4 mt-10">
-                        <a href="#">
-                            SMEG SMB401 Stainless Steel Bowl 4,8 L
-                        </a>
-                    </h3>
-                    <p class="text-sm font-medium text-gray-900 p-4">$125</p>
                 </div>
                 
-                <div class="group relative border border-gray-200 rounded-md group-hover:opacity-75 mx-4">
-                    <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
+                
+                <div class="group relative">
+                    <div class="border border-gray-200 rounded-md group-hover:scale-110 transition-transform mx-4 overflow-hidden duration-300">
+                        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
     
-                        <img src="dough.jpeg" alt="" class="h-full w-full object-cover object-center">
-    
-                        <button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black text-white px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            Add to Cart
-                          </button>
-                    </div>
-                    <h3 class="text-sm text-gray-700 mx-4 mt-10">
-                        <a href="#">
-                            SMEG SMDH01 Dough Hook
-                        </a>
-                    </h3>
-                    <p class="text-sm font-medium text-gray-900 p-4">$37.5</p>
-                </div>
-    
-                <div class="group relative border border-gray-200 rounded-md group-hover:opacity-75">
-                    <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
-    
-                        <img src="flat.jpeg" alt="" class="h-full w-full object-cover object-center">
-    
-                        <button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black text-white px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            Add to Cart
-                          </button>
-                    </div>
-                    <h3 class="text-sm text-gray-700 mx-4 mt-4">
-                        <a href="#">
-                            SMEG SMFB01 Flat Beater
-                        </a>
-                    </h3>
-                    <p class="text-sm font-medium text-gray-900 p-4">$37.5</p>
-                </div>
-                <div class="group relative border border-gray-200 rounded-md group-hover:opacity-75 mx-4">
-                    <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
-                        <img src="flex.jpeg" alt="" class="h-full w-full object-cover object-center">
-                        <button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black text-white px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            Add to Cart
-                          </button>
-                    </div>
+                            <img src="dough.jpeg" alt="" class="h-full w-full object-cover object-center">
+        
+                            <button class="absolute text-xs top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-amber-300 text-white px-3 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                Add to Cart
+                              </button>
+                        </div>
                         <h3 class="text-sm text-gray-700 mx-4 mt-10">
                             <a href="#">
-                                SMEG SMFB02 Flex Edges Beater
+                                SMEG SMDH01 Dough Hook
                             </a>
                         </h3>
-                        <p class="text-sm font-medium text-gray-900 p-4">$84</p>
-                </div>
-                <div class="group relative border border-gray-200 rounded-md group-hover:opacity-75 mx-4">
-                    <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
-                        <img src="multi.jpeg" alt="" class="h-full w-full object-cover object-center">
-                        <button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black text-white px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            Add to Cart
-                          </button>
+                        <p class="text-sm font-medium text-gray-900 p-4">$37.5</p>
                     </div>
-                        <h3 class="text-sm text-gray-700 mx-4 mt-10">
-                            <a href="#">
-                                SMEG SMMG01 Multi Food Grinder
-                            </a>
-                        </h3>
-                        <p class="text-sm font-medium text-gray-900 p-4">$129</p>
                 </div>
+    
+                <div class="group relative">
+                    <div class="border border-gray-200 rounded-md group-hover:scale-110 transition-transform mx-4 overflow-hidden duration-300">
+                            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
+        
+                                <img src="flat.jpeg" alt="" class="h-full w-full object-cover object-center">
+            
+                                <button class="absolute text-xs top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-amber-300 text-white px-3 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                    Add to Cart
+                                </button>
+                            </div>
+                            <h3 class="text-sm text-gray-700 mx-4 mt-4">
+                                <a href="#">
+                                    SMEG SMFB01 Flat Beater
+                                </a>
+                            </h3>
+                            <p class="text-sm font-medium text-gray-900 p-4">$37.5</p>
+                    </div>
+                </div>
+                    
+                <div class="group relative">
+                    <div class="border border-gray-200 rounded-md group-hover:scale-110 transition-transform mx-4 overflow-hidden duration-300">
+                        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
+                            <img src="flex.jpeg" alt="" class="h-full w-full object-cover object-center">
+                            <button class="absolute text-xs top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-amber-300 text-white px-3 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                Add to Cart
+                              </button>
+                        </div>
+                            <h3 class="text-sm text-gray-700 mx-4 mt-10">
+                                <a href="#">
+                                    SMEG SMFB02 Flex Edges Beater
+                                </a>
+                            </h3>
+                            <p class="text-sm font-medium text-gray-900 p-4">$84</p>
+                    </div>
+                    </div>
+
+                <div class="group relative">
+                    <div class="border border-gray-200 rounded-md group-hover:scale-110 transition-transform mx-4 overflow-hidden duration-300">
+                        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
+                            <img src="multi.jpeg" alt="" class="h-full w-full object-cover object-center">
+                            <button class="absolute text-xs top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-amber-300 text-white px-3 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                Add to Cart
+                              </button>
+                        </div>
+                            <h3 class="text-sm text-gray-700 mx-4 mt-10">
+                                <a href="#">
+                                    SMEG SMMG01 Multi Food Grinder
+                                </a>
+                            </h3>
+                            <p class="text-sm font-medium text-gray-900 p-4">$129</p>
+                    </div>
+                </div>
+                    
             </div>
         </div>
         <!-- <div class="grid grid-cols-4 gap-4 cursor-pointer">
@@ -263,85 +287,97 @@
             </div>
         </div>
         <div class="m-20">
-            <div class="mt-6 grid grid-cols-5 gap-x-20 gap-y-10 mx-auto">
-                <div class="group relative border border-gray-200 rounded-md group-hover:opacity-75 mx-4">
-                    <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
+            <div class="mt-6 grid grid-cols-5 gap-x-5 gap-y-5 mx-auto">
+                <div class="group relative">
+                    <div class="border border-gray-200 rounded-md group-hover:scale-110 transition-transform mx-4 overflow-hidden duration-300">
+                        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
     
-                        <img src="https://shop.toffin.id/web/image/product.template/39119/image" alt="" class="h-full w-full object-cover object-center">
-    
-                        <button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black text-white px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            Add to Cart
-                          </button>
+                            <img src="https://shop.toffin.id/web/image/product.template/39119/image" alt="" class="h-full w-full object-cover object-center">
+        
+                            <button class="absolute text-xs top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-amber-300 text-white px-3 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                        <h3 class="text-sm text-gray-700 mx-4 mt-10">
+                            <a href="#">
+                                SMEG Stand Mixer (SMF02) Black
+                            </a>
+                        </h3>
+                        <p class="text-sm font-medium text-gray-900 p-4">$1099</p>
                     </div>
-                    <h3 class="text-sm text-gray-700 mx-4 mt-10">
-                        <a href="#">
-                            SMEG Stand Mixer (SMF02) Black
-                        </a>
-                    </h3>
-                    <p class="text-sm font-medium text-gray-900 p-4">$1099</p>
-                </div>
+                    </div>
                 
-                <div class="group relative border border-gray-200 rounded-md group-hover:opacity-75 mx-4">
-                    <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
+                <div class="group relative">
+                    <div class="border border-gray-200 rounded-md group-hover:scale-110 transition-transform mx-4 overflow-hidden duration-300">
+                        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
     
-                        <img src="https://shop.toffin.id/web/image/product.template/39120/image" alt="" class="h-full w-full object-cover object-center">
-    
-                        <button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black text-white px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            Add to Cart
-                          </button>
-                    </div>
-                    <h3 class="text-sm text-gray-700 mx-4 mt-10">
-                        <a href="#">
-                            SMEG Stand Mixer (SMF02) Cream
-                        </a>
-                    </h3>
-                    <p class="text-sm font-medium text-gray-900 p-4">$37.5</p>
-                </div>
-    
-                <div class="group relative border border-gray-200 rounded-md group-hover:opacity-75">
-                    <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
-    
-                        <img src="https://shop.toffin.id/web/image/product.template/39122/image" alt="" class="h-full w-full object-cover object-center">
-    
-                        <button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black text-white px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            Add to Cart
-                          </button>
-                    </div>
-                    <h3 class="text-sm text-gray-700 mx-4 mt-4">
-                        <a href="#">
-                            SMEG Stand Mixer (SMF02) Green
-                        </a>
-                    </h3>
-                    <p class="text-sm font-medium text-gray-900 p-4">$37.5</p>
-                </div>
-                <div class="group relative border border-gray-200 rounded-md group-hover:opacity-75 mx-4">
-                    <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
-                        <img src="https://shop.toffin.id/web/image/product.template/39123/image" alt="" class="h-full w-full object-cover object-center">
-                        <button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black text-white px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            Add to Cart
-                          </button>
-                    </div>
+                            <img src="https://shop.toffin.id/web/image/product.template/39120/image" alt="" class="h-full w-full object-cover object-center">
+        
+                            <button class="absolute text-xs top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-amber-300 text-white px-3 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
                         <h3 class="text-sm text-gray-700 mx-4 mt-10">
                             <a href="#">
-                                SMEG Stand Mixer (SMF02) Pink
+                                SMEG Stand Mixer (SMF02) Cream
                             </a>
                         </h3>
-                        <p class="text-sm font-medium text-gray-900 p-4">$84</p>
-                </div>
-                <div class="group relative border border-gray-200 rounded-md group-hover:opacity-75 mx-4">
-                    <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
-                        <img src="https://shop.toffin.id/web/image/product.template/39124/image" alt="" class="h-full w-full object-cover object-center">
-                        <button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-black text-white px-4 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                            Add to Cart
-                          </button>
+                        <p class="text-sm font-medium text-gray-900 p-4">$1099</p>
                     </div>
-                        <h3 class="text-sm text-gray-700 mx-4 mt-10">
+                    </div>
+    
+                <div class="group relative">
+                    <div class="border border-gray-200 rounded-md group-hover:scale-110 transition-transform mx-4 overflow-hidden duration-300">
+                        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
+    
+                            <img src="https://shop.toffin.id/web/image/product.template/39122/image" alt="" class="h-full w-full object-cover object-center">
+        
+                            <button class="absolute text-xs top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-amber-300 text-white px-3 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                        <h3 class="text-sm text-gray-700 mx-4 mt-4">
                             <a href="#">
-                                SMEG Stand Mixer (SMF02) Red
+                                SMEG Stand Mixer (SMF02) Green
                             </a>
                         </h3>
-                        <p class="text-sm font-medium text-gray-900 p-4">$129</p>
-                </div>
+                        <p class="text-sm font-medium text-gray-900 p-4">$1099</p>
+                    </div>
+                    </div>
+                    
+                <div class="group relative">
+                    <div class="border border-gray-200 rounded-md group-hover:scale-110 transition-transform mx-4 overflow-hidden duration-300">
+                        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
+                            <img src="https://shop.toffin.id/web/image/product.template/39123/image" alt="" class="h-full w-full object-cover object-center">
+                            <button class="absolute text-xs top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-amber-300 text-white px-3 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                            <h3 class="text-sm text-gray-700 mx-4 mt-10">
+                                <a href="#">
+                                    SMEG Stand Mixer (SMF02) Pink
+                                </a>
+                            </h3>
+                            <p class="text-sm font-medium text-gray-900 p-4">$1099</p>
+                    </div>
+                    </div>
+                   
+                <div class="group relative">
+                    <div class="border border-gray-200 rounded-md group-hover:scale-110 transition-transform mx-4 overflow-hidden duration-300">
+                        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
+                            <img src="https://shop.toffin.id/web/image/product.template/39124/image" alt="" class="h-full w-full object-cover object-center">
+                            <button class="absolute text-xs top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-amber-300 text-white px-3 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                                Add to Cart
+                            </button>
+                        </div>
+                            <h3 class="text-sm text-gray-700 mx-4 mt-10">
+                                <a href="#">
+                                    SMEG Stand Mixer (SMF02) Red
+                                </a>
+                            </h3>
+                            <p class="text-sm font-medium text-gray-900 p-4">$1099</p>
+                    </div>
+                    </div>
             </div>
         </div>
     </section>
