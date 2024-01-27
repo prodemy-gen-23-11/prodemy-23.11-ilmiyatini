@@ -309,7 +309,7 @@ div.promo-text:hover::after {
     background-color: #e74c3c; 
     color: #fff; 
     border: none;
-    padding: 5px 9px;
+    padding: 5px;
     border-radius: 5px;
     font-size: 10px;
     cursor: pointer;
