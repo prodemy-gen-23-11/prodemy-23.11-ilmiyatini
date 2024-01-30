@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce designed referensi Ani Gulordava (dribbble)</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header id="header-1">
+        <div class="text-xs p-1 bg-amber-300 text-black text-center w-full"><p><strong>Act fast!</strong> Save up to 50% on Fall Sale deals. <b>Explore Sale</b></p></div>
+    </header>
+    <!-- <header>
+        <div class="sm:block md:block lg:hidden xl:hidden flex flex-col border-b-2 border-inherit">
+            <div class="flex justify-around w-full">
+                <img class="relative w-16 ml-10" src="logo-3.png" alt="logo-ilCommerce">
+                <form id="search-form">
+                    <input
+                      type="text"
+                      id="search-input"
+                      placeholder="Search for products or brands..."
+                      class="w-96 mt-2 mr-2 p-2 text-xs border border-gray-300 rounded outline-none bg-gray-200 focus:border-yellow-500">
+                  </form>
+                  <span id="user-tools" class="flex items-center mr-10">
+                    <span class="mr-2 hover:bg-amber-300 rounded-md p-1">
+                      <button class="flex items-center">
+                        <img src="user.png" id="sign-in-icon" alt="logo user" class="w-4">
+                      </button>
+                    </span>
+                    <span class="hover:bg-amber-300 rounded-md p-1">
+                      <button class="flex items-center">
+                        <img src="cart.png" id="cart-icon-" alt="logo user" class="w-5 mr-1">
+                      </button>
+                    </span>
+                  </span>
+            </div>
+            <div class="flex justify-center w-full mb-2">
+                <nav class="mt-2">
+                    <ul class="flex text-sm font-sans">
+                        <li class="mx-4">
+                          <a class="hover:text-yellow-500 hover:shadow-md transition duration-150" href="categories.html">
+                            <b>Categories</b>
+                          </a>
+                        </li>
+                        <li class="mx-4">
+                          <a class="hover:text-yellow-500 hover:shadow-md transition duration-150" href="sale.html">
+                            <b>Sale</b>
+                          </a>
+                        </li>
+                        <li class="mx-4">
+                          <a class="hover:text-yellow-500 hover:shadow-md transition duration-150" href="bestPrice.html">
+                            <b>Best Price</b>
+                          </a>
+                        </li>
+                        <li class="mx-4">
+                          <a class="hover:text-yellow-500 hover:shadow-md transition duration-150" href="whatsNew.html">
+                            <b>Whats New</b>
+                          </a>
+                        </li>
+                        <li class="mx-4">
+                          <a class="hover:text-yellow-500 hover:shadow-md transition duration-150" href="pickupDelivery.html">
+                            <b>Pickup & Delivery</b>
+                          </a>
+                        </li>
+                      </ul>
+                </nav>
+            </div>
+        </div>
+    </header> -->
+    <header>
+        <div class="flex text-black w-full border-b-2 border-inherit justify-between overflow-auto p-1">
+            <img class="relative w-12 md:w-16 ml-10 mr-4" src="logo-3.png" alt="logo-ilCommerce">
+            <nav class="hidden lg:block mt-2">
+                <ul class="flex text-xs md:text-sm font-sans">
+                    <li class="mx-2">
+                      <a class="hover:text-yellow-500 hover:shadow-md transition duration-150" href="categories.html">
+                        <b>Categories</b>
+                      </a>
+                    </li>
+                    <li class="mx-2">
+                      <a class="hover:text-yellow-500 hover:shadow-md transition duration-150" href="sale.html">
+                        <b>Sale</b>
+                      </a>
+                    </li>
+                    <li class="mx-2">
+                      <a class="hover:text-yellow-500 hover:shadow-md transition duration-150" href="bestPrice.html">
+                        <b>Best Price</b>
+                      </a>
+                    </li>
+                    <li class="mx-2">
+                      <a class="hover:text-yellow-500 hover:shadow-md transition duration-150" href="whatsNew.html">
+                        <b>Whats New</b>
+                      </a>
+                    </li>
+                    <li class="mx-2">
+                      <a class="hover:text-yellow-500 hover:shadow-md transition duration-150" href="pickupDelivery.html">
+                        <b>Pickup & Delivery</b>
+                      </a>
+                    </li>
+                  </ul>
+            </nav>
+            <form id="search-form">
+                <input
+                  type="text"
+                  id="search-input"
+                  placeholder="Search for products or brands..."
+                  class="relative w-40 md:w-60 lg:w-64 xl:w-80 mt-1 p-2 text-xs border border-gray-300 rounded outline-none bg-gray-200 focus:border-yellow-500">
+              </form>
+            <span id="user-tools" class="flex items-center mr-10">
+              <span class="mr-2 hover:bg-amber-300 rounded-md p-1">
+                <button class="flex items-center">
+                  <img src="user.png" id="sign-in-icon" alt="logo user" class="w-4 mr-1">
+                  <span class="hidden md:block text-user-tools text-xs">Sign in</span>
+                </button>
+              </span>
+              
+              <span class="hover:bg-amber-300 rounded-md p-1">
+                <button class="flex items-center">
+                  <img src="cart.png" id="cart-icon-" alt="logo user" class="w-5 mr-1">
+                  <span class="hidden md:block text-user-tools text-xs">Cart</span>
+                </button>
+              </span>
+            </span>     
+        </div>
+    </header>
+
+    <section>
+        <div class="flex font-sans mt-4 mx-4 border border-gray-200 p-4 bg-amber-100 rounded-md flex-col md:flex-row">
+            <div class="flex-none w-full md:w-5/12 relative overflow-x-auto">
+                <div class="flex flex-col">
+                    <div class="w-auto bg-gray-200 hover:scale-105 hover:shadow-md transition duration-300 mb-2">
+                        <img id="previewImage" src="smeg-black.png" alt="">
+                    </div>
+                    <div class="flex flex-row mt-[10px] overflow-x-auto">
+                        <div class="preview-option mr-1" onclick="updatePreview('smeg-black.png',this)">
+                            <img src="smeg-black.png" alt="">
+                        </div>
+                        <div class="preview-option mr-1" onclick="updatePreview('smeg-pink.png',this)">
+                            <img src="smeg-pink.png" alt="">
+                        </div>
+                        <div class="preview-option mr-1" onclick="updatePreview('smeg-red.png',this)">
+                            <img src="smeg-red.png" alt="">
+                        </div>
+                        <div class="preview-option" onclick="updatePreview('smeg-cream.png',this)">
+                            <img src="smeg-cream.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <form class="flex-auto p-6 mt-4 md:mt-0">
+                <div class="flex flex-wrap">
+                    <h1 class="text-base md:text-xl font-semibold text-slate-900 transition duration-100 ease-in-out hover:text-yellow-500 cursor-pointer">
+                        SMEG Stand Mixer (SMF02) 
+                    </h1>
+                    <div class="w-full text-base md:text-lg font-semibold text-slate-500  cursor-pointer">
+                        <span class="line-through text-gray-400 ">$1999</span> $ 1099 <button class="discount">-20%</button>
+                    </div>
+                    <div class="w-full flex-none text-sm md:text-base font-medium text-slate-700 mt-2">
+                      In stock
+                    </div>
+                    <div class="w-full flex-none font-medium text-slate-700 cursor-pointer">
+                        <div class="rating mt-2 text-xs">
+                            <i class="fas fa-star text-yellow-500"></i>
+                            <i class="fas fa-star text-yellow-500"></i>
+                            <i class="fas fa-star text-yellow-500"></i>
+                            <i class="fas fa-star text-yellow-500"></i>
+                            <i class="far fa-star text-gray-400 hover:text-yellow-500 transition"></i>
+                          </div>
+                    </div>
+                    <div class="w-full flex-none text-xs md:text-lg font-light text-slate-700 mt-2">
+                        <p>Brand : SMEG</p>
+                        <p>Control Type : Lever</p>
+                        <p>LCD : No</p>
+                        <p>Capacity : 1 L</p>
+                        <p>Dimensions (HxLxW) : 37.8cm x 40.2cm x 22.1cm</p>
+                        <p>Power : 800 watt</p>
+                        <p>Number of Speed : 10</p>
+                        <p>Weight : 9.5 kg</p>
+                    </div>
+                </div>
+                <div class="flex-auto flex space-x-4 mb-4 text-xs md:text-sm font-medium mt-5">
+                    <button class="h-10 px-6 font-semibold rounded-md bg-black text-white transition duration-300 ease-in-out transform hover:scale-105" type="submit">
+                        Buy now
+                    </button>
+                    <button class="h-10 px-6 font-semibold rounded-md border border-slate-200 text-slate-900 bg-amber-300 transition duration-300 ease-in-out transform hover:scale-105" type="button">
+                        Add to cart <i class="fas fa-shopping-cart text-xs"></i>
+                    </button>
+                    <button id="likeButton" class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border border-slate-300 hover:text-red-500" type="button" aria-label="Like" onclick="changeColor()">
+                        <svg width="20" height="20" fill="currentColor" aria-hidden="true">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
+                        </svg>
+                      </button>
+                    </div>
+                    <p class="text-xs md:text-sm text-slate-700">
+                        Free shipping on all continental US orders.
+                    </p>
+            </form>
+        </div>
+    </section>
+    <script>
+        function updatePreview(imageSrc,clickedElement) {
+            var previewImage = document.querySelector('#previewImage');
+
+            previewImage.src = imageSrc;
+
+            var previewOptions = document.querySelectorAll('.preview-option');
+
+            previewOptions.forEach(option => {
+                option.style.opacity = (option === clickedElement) ? 1 : 0.7;
+                }
+            );
+        }
+
+        function changeColor() {
+            var likeButton = document.getElementById('likeButton');
+            likeButton.classList.toggle('text-slate-300');
+            likeButton.classList.toggle('text-red-500');
+        }
+        function changeColorIcon(icon) {
+            icon.classList.toggle('text-slate-300');
+            icon.classList.toggle('text-red-500');
+        }
+    </script>
+    <section>
+        <div class="m-10 bg-gray-200 p-2 rounded">
+            <div class="flex justify-between">
+                <h2 class="text-l text-gray-500 p-2 hover:text-black hover:scale-105 cursor-pointer">Product Accessories</h2>
+                <span class="pagination">
+                    <a class="text-2xl text-gray-400 hover:text-gray-500 inline-flex items-center px-4  border border-transparent font-semibold rounded-md" href="#">
+                        <button>&laquo;</button>
+                    </a>
+                    <a class="text-2xl text-gray-400 hover:text-gray-500 inline-flex items-center px-4 border border-transparent font-semibold rounded-md" href="#">
+                        <button>&raquo;</button>
+                    </a>
+                </span>
+            </div>
+        </div>
+        <div class="my-5 mx-20">
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-5 gap-y-5 mx-auto">
+                
+                <div class="group relative shadow">
+                    <div class="border border-gray-200 rounded-md group-hover:scale-105 transition-transform mx-4 overflow-hidden duration-300">
+                        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
+
+                            <i class="fas fa-heart text-xl  text-slate-300 hover:text-red-500 absolute top-2 right-7 cursor-pointer transition-colors" onclick="changeColorIcon(this)" ></i>
+                            <img src="bowl.jpeg" alt="" class="h-full w-full object-cover object-center">
+        
+                            <button class="btn-cart hover:bg-black"><i class="fas fa-shopping-cart text-xs"></i>
+                                Add to Cart
+                              </button>
+                        </div>
+                        <h3 class="text-sm text-gray-700 mx-4 mt-7">
+                            <a href="#">
+                                SMEG SMB401 Stainless Steel Bowl
+                            </a>
+                        </h3>
+                        <p class="text-sm font-medium text-gray-900 p-4">$125</p>
+                    </div>
+                </div>
+                
+                
+                <div class="group relative shadow">
+                    <div class="border border-gray-200 rounded-md group-hover:scale-105 transition-transform mx-4 overflow-hidden duration-300">
+                        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
+
+                            <i class="fas fa-heart text-xl  text-slate-300 hover:text-red-500 absolute top-2 right-7 cursor-pointer transition-colors" onclick="changeColorIcon(this)" ></i>
+
+                            <img src="dough.jpeg" alt="" class="h-full w-full object-cover object-center">
+        
+                            <button class="btn-cart hover:bg-black"><i class="fas fa-shopping-cart text-xs"></i>
+                                Add to Cart
+                              </button>
+                        </div>
+                        <h3 class="text-sm text-gray-700 mx-4 mt-7">
+                            <a href="#">
+                                SMEG SMDH01 Dough Hook
+                            </a>
+                        </h3>
+                        <p class="text-sm font-medium text-gray-900 p-4">$37.5</p>
+                    </div>
+                </div>
+    
+                <div class="group relative shadow">
+                    <div class="border border-gray-200 rounded-md group-hover:scale-105 transition-transform mx-4 overflow-hidden duration-300">
+                            <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
+
+                                <i class="fas fa-heart text-xl  text-slate-300 hover:text-red-500 absolute top-2 right-7 cursor-pointer transition-colors" onclick="changeColorIcon(this)" ></i>
+        
+                                <img src="flat.jpeg" alt="" class="h-full w-full object-cover object-center">
+            
+                                <button class="btn-cart hover:bg-black"><i class="fas fa-shopping-cart text-xs"></i>
+                                    Add to Cart
+                                </button>
+                            </div>
+                            <h3 class="text-sm text-gray-700 mx-4 mt-7">
+                                <a href="#">
+                                    SMEG SMFB01 Flat Beater
+                                </a>
+                            </h3>
+                            <p class="text-sm font-medium text-gray-900 p-4">$37.5</p>
+                    </div>
+                </div>
+                    
+                <div class="group relative shadow">
+                    <div class="border border-gray-200 rounded-md group-hover:scale-105 transition-transform mx-4 overflow-hidden duration-300">
+                        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
+
+                            <i class="fas fa-heart text-xl  text-slate-300 hover:text-red-500 absolute top-2 right-7 cursor-pointer transition-colors" onclick="changeColorIcon(this)" ></i> 
+
+                            <img src="flex.jpeg" alt="" class="h-full w-full object-cover object-center">
+                            <button class="btn-cart hover:bg-black"><i class="fas fa-shopping-cart text-xs"></i>
+                                Add to Cart
+                              </button>
+                        </div>
+                            <h3 class="text-sm text-gray-700 mx-4 mt-7">
+                                <a href="#">
+                                    SMEG SMFB02 Flex Edges Beater
+                                </a>
+                            </h3>
+                            <p class="text-sm font-medium text-gray-900 p-4">$84</p>
+                    </div>
+                    </div>
+
+                <div class="group relative shadow">
+                    <div class="border border-gray-200 rounded-md group-hover:scale-105 transition-transform mx-4 overflow-hidden duration-300">
+                        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
+
+                            <i class="fas fa-heart text-xl  text-slate-300 hover:text-red-500 absolute top-2 right-7 cursor-pointer transition-colors" onclick="changeColorIcon(this)" ></i>
+
+                            <img src="multi.jpeg" alt="" class="h-full w-full object-cover object-center">
+                            <button class="btn-cart hover:bg-black"><i class="fas fa-shopping-cart text-xs"></i>
+                                Add to Cart
+                              </button>
+                        </div>
+                            <h3 class="text-sm text-gray-700 mx-4 mt-7">
+                                <a href="#">
+                                    SMEG SMMG01 Multi Food Grinder
+                                </a>
+                            </h3>
+                            <p class="text-sm font-medium text-gray-900 p-4">$129</p>
+                    </div>
+                </div>
+                    
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="m-10 bg-gray-200 p-2 rounded">
+            <div class="flex justify-between">
+                <h2 class="text-l text-gray-500 p-2 hover:text-black hover:scale-105 cursor-pointer">Related Product</h2>
+                <span class="pagination">
+                    <a class="text-2xl text-gray-400 hover:text-gray-500 inline-flex items-center px-4  border border-transparent font-semibold rounded-md" href="#">
+                        <button>&laquo;</button>
+                    </a>
+                    <a class="text-2xl text-gray-400 hover:text-gray-500 inline-flex items-center px-4 border border-transparent font-semibold rounded-md" href="#">
+                        <button>&raquo;</button>
+                    </a>
+                </span>
+            </div>
+        </div>
+        <div class="mx-20 my-5">
+            <div class="mt-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-5 gap-y-5 mx-auto">
+                <div class="group relative shadow">
+                    <div class="border border-gray-200 rounded-md group-hover:scale-105 transition-transform mx-4 overflow-hidden duration-300">
+                        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
+
+                            <i class="fas fa-heart text-xl  text-slate-300 hover:text-red-500 absolute top-2 right-7 cursor-pointer transition-colors" onclick="changeColorIcon(this)" ></i>
+    
+                            <img src="VBM Domobar Super HX 40.jpeg" alt="" class="h-full w-full object-cover object-center">
+        
+                            <button class="btn-cart hover:bg-black"><i class="fas fa-shopping-cart text-xs"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                        <h3 class="text-sm text-gray-700 mx-4 mt-7">
+                            <a href="#">
+                                VBM Domobar Super HX
+                            </a>
+                        </h3>
+                        <p class="text-sm font-medium text-gray-900 p-4">$2857,14</p>
+                    </div>
+                </div>
+                
+                <div class="group relative shadow">
+                    <div class="border border-gray-200 rounded-md group-hover:scale-105 transition-transform mx-4 overflow-hidden duration-300">
+                        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
+
+                            <i class="fas fa-heart text-xl  text-slate-300 hover:text-red-500 absolute top-2 right-7 cursor-pointer transition-colors" onclick="changeColorIcon(this)" ></i>
+    
+                            <img src="VBM Domobar Super Rotary 42.png" alt="" class="h-full w-full object-cover object-center">
+        
+                            <button class="btn-cart hover:bg-black"><i class="fas fa-shopping-cart text-xs"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                        <h3 class="text-sm text-gray-700 mx-4 mt-7">
+                            <a href="#">
+                                VBM Domobar Super Rotary
+                            </a>
+                        </h3>
+                        <p class="text-sm font-medium text-gray-900 p-4">$2999</p>
+                    </div>
+                    </div>
+    
+                <div class="group relative shadow">
+                    <div class="border border-gray-200 rounded-md group-hover:scale-105 transition-transform mx-4 overflow-hidden duration-300">
+                        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
+
+                            <i class="fas fa-heart text-xl  text-slate-300 hover:text-red-500 absolute top-2 right-7 cursor-pointer transition-colors" onclick="changeColorIcon(this)" ></i>
+    
+                            <img src="Allegra-Uno-22.jpeg" alt="" class="h-full w-full object-cover object-center">
+        
+                            <button class="btn-cart hover:bg-black"><i class="fas fa-shopping-cart text-xs"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                        <h3 class="text-sm text-gray-700 mx-4 mt-7">
+                            <a href="#">
+                                Allegra Uno Hario EEM-2-HSV 
+                            </a>
+                        </h3>
+                        <p class="text-sm font-medium text-gray-900 p-4">$1399</p>
+                    </div>
+                </div>
+                    
+                <div class="group relative shadow">
+                    <div class="border border-gray-200 rounded-md group-hover:scale-105 transition-transform mx-4 overflow-hidden duration-300">
+                        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
+
+                            <i class="fas fa-heart text-xl  text-slate-300 hover:text-red-500 absolute top-2 right-7 cursor-pointer transition-colors" onclick="changeColorIcon(this)" ></i>
+
+                            <img src="Hario_EEM-2-HSV_Espresso_Machine (Silver)-13.95.jpeg" alt="" class="h-full w-full object-cover object-center">
+                            <button class="btn-cart hover:bg-black"><i class="fas fa-shopping-cart text-xs"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                            <h3 class="text-sm text-gray-700 mx-4 mt-7">
+                                <a href="#">
+                                    Espresso Machine (Silver)
+                                </a>
+                            </h3>
+                            <p class="text-sm font-medium text-gray-900 p-4">$1999</p>
+                    </div>
+                </div>
+                   
+                <div class="group relative shadow">
+                    <div class="border border-gray-200 rounded-md group-hover:scale-105 transition-transform mx-4 overflow-hidden duration-300">
+                        <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
+
+                            <i class="fas fa-heart text-xl  text-slate-300 hover:text-red-500 absolute top-2 right-7 cursor-pointer transition-colors" onclick="changeColorIcon(this)" ></i>
+
+                            <img src="Nuova Simonelli Oscar II.png" alt="" class="h-full w-full object-cover object-center">
+                            <button class="btn-cart hover:bg-black"><i class="fas fa-shopping-cart text-xs"></i>
+                                Add to Cart
+                            </button>
+                        </div>
+                            <h3 class="text-sm text-gray-700 mx-4 mt-7">
+                                <a href="#">
+                                    Nuova Simonelli Oscar II
+                                </a>
+                            </h3>
+                            <p class="text-sm font-medium text-gray-900 p-4">$2999</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="bg-gray-700 text-white p-10 mt-20 font-sans">
+            <div class="footer-container">
+                <div class="footer-section about">
+                    <h2>About Us</h2>
+                    <p>Everything you require is available here. We provide a wide range of categories for you to select from.</p>
+                </div>
+            <div class="footer-section links" >
+                <h2>Quick Links</h2>
+                <ul class="footer-ul mb-4">
+                    <li><a style="color: #fff;text-decoration: none; font-size: 12px;" href="#">Home</a></li>
+                    <li><a style="color: #fff;text-decoration: none; font-size: 12px;" href="#">Products</a></li>
+                    <li><a style="color: #fff;text-decoration: none; font-size: 12px;" href="#">Services</a></li>
+                    <li><a style="color: #fff;text-decoration: none; font-size: 12px;" href="#">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section why-us">
+                <h2>Why Us</h2>
+                <p>We are the best in our field.</p>
+            </div>
+            <div class="footer-section download-app">
+                <h2>Download App</h2>
+                <p>Get our mobile app for a seamless experience on the go.</p>
+                <button class="download-btn">Download Now</button>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contact Us</h2>
+                <p>Email: ilshop@gmail.com</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+            <div class="footer-section social">
+                <h2>Follow Us</h2>
+                <ul class="social-icons">
+                    <li><a href="#" target="_blank"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="text-center my-1 copyright text-xs">
+            <p>&copy; 2024 Ilshop. All rights reserved.</p>
+        </div>
+    </div>
+  </footer>
+</body>
+</html>
