@@ -187,7 +187,7 @@
                     <button class="h-10 px-6 font-semibold rounded-md border border-slate-200 text-slate-900 bg-amber-300 transition duration-300 ease-in-out transform hover:scale-105" type="button">
                         Add to cart <i class="fas fa-shopping-cart text-xs"></i>
                     </button>
-                    <button id="likeButton" class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border border-slate-300 hover:text-red-500" type="button" aria-label="Like" onclick="changeColor()">
+                    <button id="likeButton" class="flex-none flex items-center justify-center w-9 h-9 rounded-md text-slate-300 border border-slate-300 hover:text-red-500" type="button" aria-label="Like" >
                         <svg width="20" height="20" fill="currentColor" aria-hidden="true">
                           <path fill-rule="evenodd" clip-rule="evenodd" d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
                         </svg>
@@ -213,15 +213,7 @@
             );
         }
 
-        function changeColor() {
-            var likeButton = document.getElementById('likeButton');
-            likeButton.classList.toggle('text-slate-300');
-            likeButton.classList.toggle('text-red-500');
-        }
-        function changeColorIcon(icon) {
-            icon.classList.toggle('text-slate-300');
-            icon.classList.toggle('text-red-500');
-        }
+
     </script>
     <section>
         <div class="m-10 bg-gray-200 p-2 rounded">
@@ -244,7 +236,7 @@
                     <div class="border border-gray-200 rounded-md group-hover:scale-105 transition-transform mx-4 overflow-hidden duration-300">
                         <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
 
-                            <i class="fas fa-heart text-xl  text-slate-300 hover:text-red-500 absolute top-2 right-7 cursor-pointer transition-colors" onclick="changeColorIcon(this)" ></i>
+                            <i class="fas fa-heart text-xl  text-slate-300 hover:text-red-500 absolute top-2 right-7 cursor-pointer transition-colors" ></i>
                             <img src="bowl.jpeg" alt="" class="h-full w-full object-cover object-center">
         
                             <button class="btn-cart hover:bg-black"><i class="fas fa-shopping-cart text-xs"></i>
@@ -265,7 +257,7 @@
                     <div class="border border-gray-200 rounded-md group-hover:scale-105 transition-transform mx-4 overflow-hidden duration-300">
                         <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
 
-                            <i class="fas fa-heart text-xl  text-slate-300 hover:text-red-500 absolute top-2 right-7 cursor-pointer transition-colors" onclick="changeColorIcon(this)" ></i>
+                            <i class="fas fa-heart text-xl  text-slate-300 hover:text-red-500 absolute top-2 right-7 cursor-pointer transition-colors"  ></i>
 
                             <img src="dough.jpeg" alt="" class="h-full w-full object-cover object-center">
         
@@ -286,7 +278,7 @@
                     <div class="border border-gray-200 rounded-md group-hover:scale-105 transition-transform mx-4 overflow-hidden duration-300">
                             <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
 
-                                <i class="fas fa-heart text-xl  text-slate-300 hover:text-red-500 absolute top-2 right-7 cursor-pointer transition-colors" onclick="changeColorIcon(this)" ></i>
+                                <i class="fas fa-heart text-xl  text-slate-300 hover:text-red-500 absolute top-2 right-7 cursor-pointer transition-colors"></i>
         
                                 <img src="flat.jpeg" alt="" class="h-full w-full object-cover object-center">
             
@@ -307,7 +299,7 @@
                     <div class="border border-gray-200 rounded-md group-hover:scale-105 transition-transform mx-4 overflow-hidden duration-300">
                         <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
 
-                            <i class="fas fa-heart text-xl  text-slate-300 hover:text-red-500 absolute top-2 right-7 cursor-pointer transition-colors" onclick="changeColorIcon(this)" ></i> 
+                            <i class="fas fa-heart text-xl  text-slate-300 hover:text-red-500 absolute top-2 right-7 cursor-pointer transition-colors" ></i> 
 
                             <img src="flex.jpeg" alt="" class="h-full w-full object-cover object-center">
                             <button class="btn-cart hover:bg-black"><i class="fas fa-shopping-cart text-xs"></i>
@@ -327,7 +319,7 @@
                     <div class="border border-gray-200 rounded-md group-hover:scale-105 transition-transform mx-4 overflow-hidden duration-300">
                         <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
 
-                            <i class="fas fa-heart text-xl  text-slate-300 hover:text-red-500 absolute top-2 right-7 cursor-pointer transition-colors" onclick="changeColorIcon(this)" ></i>
+                            <i class="fas fa-heart text-xl  text-slate-300 hover:text-red-500 absolute top-2 right-7 cursor-pointer transition-colors" ></i>
 
                             <img src="multi.jpeg" alt="" class="h-full w-full object-cover object-center">
                             <button class="btn-cart hover:bg-black"><i class="fas fa-shopping-cart text-xs"></i>
@@ -366,7 +358,7 @@
                     <div class="border border-gray-200 rounded-md group-hover:scale-105 transition-transform mx-4 overflow-hidden duration-300">
                         <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
 
-                            <i class="fas fa-heart text-xl  text-slate-300 hover:text-red-500 absolute top-2 right-7 cursor-pointer transition-colors" onclick="changeColorIcon(this)" ></i>
+                            <i class="fas fa-heart text-xl  text-slate-300 hover:text-red-500 absolute top-2 right-7 cursor-pointer transition-colors"  ></i>
     
                             <img src="VBM Domobar Super HX 40.jpeg" alt="" class="h-full w-full object-cover object-center">
         
@@ -387,7 +379,7 @@
                     <div class="border border-gray-200 rounded-md group-hover:scale-105 transition-transform mx-4 overflow-hidden duration-300">
                         <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
 
-                            <i class="fas fa-heart text-xl  text-slate-300 hover:text-red-500 absolute top-2 right-7 cursor-pointer transition-colors" onclick="changeColorIcon(this)" ></i>
+                            <i class="fas fa-heart text-xl  text-slate-300 hover:text-red-500 absolute top-2 right-7 cursor-pointer transition-colors" ></i>
     
                             <img src="VBM Domobar Super Rotary 42.png" alt="" class="h-full w-full object-cover object-center">
         
@@ -408,7 +400,7 @@
                     <div class="border border-gray-200 rounded-md group-hover:scale-105 transition-transform mx-4 overflow-hidden duration-300">
                         <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
 
-                            <i class="fas fa-heart text-xl  text-slate-300 hover:text-red-500 absolute top-2 right-7 cursor-pointer transition-colors" onclick="changeColorIcon(this)" ></i>
+                            <i class="fas fa-heart text-xl  text-slate-300 hover:text-red-500 absolute top-2 right-7 cursor-pointer transition-colors" ></i>
     
                             <img src="Allegra-Uno-22.jpeg" alt="" class="h-full w-full object-cover object-center">
         
@@ -429,7 +421,7 @@
                     <div class="border border-gray-200 rounded-md group-hover:scale-105 transition-transform mx-4 overflow-hidden duration-300">
                         <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
 
-                            <i class="fas fa-heart text-xl  text-slate-300 hover:text-red-500 absolute top-2 right-7 cursor-pointer transition-colors" onclick="changeColorIcon(this)" ></i>
+                            <i class="fas fa-heart text-xl  text-slate-300 hover:text-red-500 absolute top-2 right-7 cursor-pointer transition-colors"  ></i>
 
                             <img src="Hario_EEM-2-HSV_Espresso_Machine (Silver)-13.95.jpeg" alt="" class="h-full w-full object-cover object-center">
                             <button class="btn-cart hover:bg-black"><i class="fas fa-shopping-cart text-xs"></i>
@@ -449,7 +441,7 @@
                     <div class="border border-gray-200 rounded-md group-hover:scale-105 transition-transform mx-4 overflow-hidden duration-300">
                         <div class="aspect-h-1 aspect-w-1 w-full overflow-hidden">
 
-                            <i class="fas fa-heart text-xl  text-slate-300 hover:text-red-500 absolute top-2 right-7 cursor-pointer transition-colors" onclick="changeColorIcon(this)" ></i>
+                            <i class="fas fa-heart text-xl  text-slate-300 hover:text-red-500 absolute top-2 right-7 cursor-pointer transition-colors"  ></i>
 
                             <img src="Nuova Simonelli Oscar II.png" alt="" class="h-full w-full object-cover object-center">
                             <button class="btn-cart hover:bg-black"><i class="fas fa-shopping-cart text-xs"></i>
