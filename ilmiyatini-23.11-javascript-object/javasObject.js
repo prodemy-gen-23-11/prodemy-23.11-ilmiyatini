@@ -2,8 +2,8 @@ let song={
     title:'Blank Space',
     artist: 'Taylor Swift',
     album: '1989',
-    year :2014
-}
+    year :2014,
+};
 function displaySong(){
     console.log('\n------Current Song-------\n');
     console.log('Title\t:', song.title);
@@ -30,14 +30,14 @@ const args = process.argv.slice(2);
 displaySong()
 
 if (args.length === 2) {
-    const property = args[0].toLowerCase(); 
+    const property = args[0];
     const value = args[1];
 
     modifySong(property, value);
     displaySong();
-    console.log('to add a new song: node yourScript.js add "New Song Title" "New Artist" "New Genre" year\n');
+    console.log('to add a new song: node javasObject.js add "New Song Title" "New Artist" "New Genre" year\n');
     console.log('\nProgram closed.');
-  } else if (args.length === 5 && args[0].toLowerCase() === 'add') {
+  } else if (args.length === 5 && args[0] === 'add') {
     const newSong = {
       title: args[1],
       artist: args[2],
@@ -46,10 +46,10 @@ if (args.length === 2) {
     };
   
     addNewSong(newSong);
-    console.log('\nTo change property: node yourScript.js <property> <value>');
+    console.log('\nTo change property: node javasObject.js <property> <value>');
     console.log('\nProgram closed.');
   } else {
-    console.log('\nTo change property\t: node yourScript.js <property> <value>');
-    console.log('Example\t\t\t: node yourScript.js title "New Title"');
-    console.log('Or, to add a new song\t: node yourScript.js add "New Song Title" "New Artist" "New Genre" 2022\n');
+    console.log('\nTo change property\t: node javasObject.js <property> <value>');
+    console.log('Example\t\t\t: node javasObject.js title "New Title"');
+    console.log('Or, to add a new song\t: node javasObject.js add "New Song Title" "New Artist" "New Genre" 2022\n');
   }
