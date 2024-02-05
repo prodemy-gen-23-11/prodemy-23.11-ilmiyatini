@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .product-card {
+        @apply flex font-sans mt-4 mx-4 border border-gray-200 p-4 bg-amber-100 rounded-md flex-col md:flex-row;
+    }
+    .container-image-all {
+        @apply flex-none w-full md:w-80 relative overflow-x-auto;
+    }
+    .image-container {
+        @apply w-auto rounded-md bg-gray-200 hover:scale-105 hover:shadow-md transition duration-300 mb-2;
+        cursor: pointer;
+    }
+
+    .additional-images {
+        @apply flex flex-wrap mt-2 justify-center; /* Gap antara gambar tambahan */
+    }
+
+    .additional-images img {
+        @apply w-1/4 mr-4 rounded-lg border-gray-500 object-center bg-gray-200 opacity-100 hover:opacity-70 transition duration-300;
+    }
+
+    .product-details {
+        @apply flex-auto p-6 mt-4 md:mt-0;
+    }
+
+    .product-details p {
+        @apply w-full flex-none text-xs md:text-base font-medium text-slate-700 mt-1;
+    }
+
+    .product-details h1 {
+        @apply text-base md:text-xl font-semibold text-slate-900 transition duration-100 ease-in-out hover:text-yellow-500 cursor-pointer;
+    }
+    .price-product {
+        @apply w-full text-base md:text-lg font-semibold text-slate-500  cursor-pointer;
+    }
+    .discount {
+        background-color: #e74c3c;
+        color: #fff;
+        border: none;
+        padding: 0px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+        cursor: pointer;
+    }
+    .product-features {
+        @apply w-full flex-none text-xs md:text-sm font-light text-slate-700 mt-2;
+    }
+    .buy-button {
+        @apply flex-auto flex space-x-4 mb-4 text-xs md:text-sm font-medium mt-5;
+    }
+}
