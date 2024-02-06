@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Button(props) {
-    const { type, onClick, label, icon, variant } = props;
+    const { type, label, icon, variant } = props;
     const getButtonClass = () => {
         switch (variant) {
             case 'primary':
@@ -16,8 +16,7 @@ function Button(props) {
     return (
         <button
             className={`h-10 px-6 font-semibold rounded-md ${getButtonClass()} transition duration-300 ease-in-out transform hover:scale-105`}
-            type={type}
-            onClick={onClick}>
+            type={type}>
             {icon && <i className={icon}></i>} {label}
         </button>
     );

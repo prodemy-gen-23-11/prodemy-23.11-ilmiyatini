@@ -15,11 +15,11 @@ function ProductCard(props) {
             <div className='container-image-all'>
                 <div className='flex flex-col'>
                     <div className='image-container'>
-                        <img src={mainImage} alt={name} onClick={() => handleImageClick(image)} />
+                        <img src={mainImage} alt={name} />
                     </div>
                     <div className='additional-images'>
                         {additionalImages.map((img, index) => (
-                            <img key={index} src={img} alt={`Additional ${index + 1}`} onClick={() => handleImageClick(img)} />
+                            <img key={index} src={img} alt='' onClick={() => handleImageClick(img)} />
                         ))}
                     </div>
                 </div>

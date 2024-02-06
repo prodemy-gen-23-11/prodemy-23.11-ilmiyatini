@@ -15,7 +15,7 @@
     }
 
     .additional-images {
-        @apply flex flex-wrap mt-2 justify-center; /* Gap antara gambar tambahan */
+        @apply flex flex-wrap mt-2 justify-center;
     }
 
     .additional-images img {
