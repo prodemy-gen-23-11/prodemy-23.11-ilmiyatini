@@ -1,5 +1,5 @@
 import React from "react";
-import AddToCartButton from "../components/AddToCartButton";
+import AddToCartButton from "./AddToCartButton";
 
 function ProductCard(props) {
   const { imageSrc, productName, price, beforePrice, diskon } = props;
