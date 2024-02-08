@@ -33,7 +33,7 @@ function ProductCardMain(props) {
         <h1>{name}</h1>
         <div className="price-product">
           <span className="line-through text-gray-400 ">$1999</span> $ {price}{" "}
-          <button class="discount1">-20%</button>
+          <button class="discount1">-45%</button>
         </div>
         <p>In stock</p>
         <div className="rating-container">
