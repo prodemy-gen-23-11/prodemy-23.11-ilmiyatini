@@ -1,9 +1,17 @@
 import React, { useState } from "react";
-import Button from "./Button";
 import "../index.css";
+import Button from "./Button";
 
-function ProductCardMain(props) {
-  const { name, price, image, additionalImages } = props;
+function MainProductCard(props) {
+  const {
+    name,
+    beforePrice,
+    price,
+    discount,
+    image,
+    additionalImages,
+    descriptions,
+  } = props;
   const [mainImage, setMainImage] = useState(image);
 
   const handleImageClick = (imageUrl) => {
@@ -18,12 +26,12 @@ function ProductCardMain(props) {
             <img src={mainImage} alt={name} />
           </div>
           <div className="additional-images">
-            {additionalImages.map((img) => (
+            {additionalImages.map((img, index) => (
               <img
-                key={img.id}
-                src={img.productSrc}
+                key={index}
+                src={img}
                 alt=""
-                onClick={() => handleImageClick(img.productSrc)}
+                onClick={() => handleImageClick(img)}
               />
             ))}
           </div>
@@ -31,11 +39,14 @@ function ProductCardMain(props) {
       </div>
       <div className="product-details">
         <h1>{name}</h1>
-        <div className="price-product">
-          <span className="line-through text-gray-400 ">$1999</span> $ {price}{" "}
-          <button class="discount1">-45%</button>
+        <div className="price-product text-sm md:text-base">
+          {beforePrice && (
+            <span className="line-through text-gray-400 ">${beforePrice}</span>
+          )}{" "}
+          ${price}{" "}
+          {discount && <button className="discount">-{discount}%</button>}
         </div>
-        <p>In stock</p>
+        <p className="text-xs md:text-sm"> In stock</p>
         <div className="rating-container">
           <div className="rating mt-2 text-xs">
             <i className="fas fa-star text-yellow-500"></i>
@@ -45,16 +56,11 @@ function ProductCardMain(props) {
             <i className="far fa-star text-gray-400 hover:text-yellow-500 transition"></i>
           </div>
         </div>
-        <div className="product-features">
-          <p>Brand : SMEG</p>
-          <p>Control Type : Lever</p>
-          <p>LCD : No</p>
-          <p>Capacity : 1 L</p>
-          <p>Dimensions (HxLxW) : 37.8cm x 40.2cm x 22.1cm</p>
-          <p>Power : 800 watt</p>
-          <p>Number of Speed : 10</p>
-          <p>Weight : 9.5 kg</p>
-        </div>
+        <ul className="product-features">
+          {descriptions.map((description, index) => (
+            <li key={index}>{description}</li>
+          ))}
+        </ul>
         <div className="buy-button">
           <Button type="submit" label="Buy now" variant="primary" />
           <Button
@@ -64,7 +70,7 @@ function ProductCardMain(props) {
             variant="secondary"
           />
         </div>
-        <p className="w-full flex-none text-xs md:text-base font-medium text-slate-700 mt-1">
+        <p className="text-xs md:text-sm">
           Free shipping on all continental US orders.
         </p>
       </div>
@@ -72,4 +78,4 @@ function ProductCardMain(props) {
   );
 }
 
-export default ProductCardMain;
+export default MainProductCard;

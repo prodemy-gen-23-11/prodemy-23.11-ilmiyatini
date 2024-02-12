@@ -133,6 +133,9 @@
     color: #f5c62e;
     font-size: 14px;
   }
+  .product-features {
+    @apply w-full flex-none text-xs md:text-sm font-light text-slate-700 mt-2;
+  }
 
   .footer-bottom {
     margin-top: 20px;
