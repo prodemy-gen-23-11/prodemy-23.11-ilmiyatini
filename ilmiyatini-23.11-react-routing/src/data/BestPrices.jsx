@@ -5,7 +5,7 @@ export default function ProductList() {
   const products = [
     {
       id: 1,
-      imageSrc: "Victoria_Arduino_VA388_Black_Eagle_T3_3_Group__Copper_.png",
+      imageSrc: "/Victoria_Arduino_VA388_Black_Eagle_T3_3_Group__Copper_.png",
       productName: "Victoria Arduino VA388 Black Eagle T3 3 Group (Copper)",
       beforePrice: 21.428,
       price: 19.285,
@@ -13,7 +13,7 @@ export default function ProductList() {
     },
     {
       id: 2,
-      imageSrc: "Hario_BGS-400_Beam_Heater_220V.png",
+      imageSrc: "/Hario_BGS-400_Beam_Heater_220V.png",
       productName: "Hario BGS-400 Beam Heater 220V",
       beforePrice: 714,
       price: 536,
@@ -21,7 +21,7 @@ export default function ProductList() {
     },
     {
       id: 3,
-      imageSrc: "smeg-black.png",
+      imageSrc: "/smeg-black.png",
       productName: "SMEG Stand Mixer",
       beforePrice: 1.999,
       price: 1.099,
@@ -29,7 +29,7 @@ export default function ProductList() {
     },
     {
       id: 4,
-      imageSrc: "Hario_M-12CP_Spoon__Copper.png",
+      imageSrc: "/Hario_M-12CP_Spoon__Copper.png",
       productName: "Hario M-12CP Spoon (Copper)",
       beforePrice: 24,
       price: 21,
@@ -37,7 +37,7 @@ export default function ProductList() {
     },
     {
       id: 5,
-      imageSrc: "Nuova_Simonelli_Grinder_MDXS_On_Demand.png",
+      imageSrc: "/Nuova_Simonelli_Grinder_MDXS_On_Demand.png",
       productName: "Nuova Simonelli Grinder MDXS On Demand",
       beforePrice: 2.428,
       price: 1.214,

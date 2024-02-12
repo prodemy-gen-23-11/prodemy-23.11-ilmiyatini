@@ -16,7 +16,7 @@ export default function Header() {
         <div className="flex gap-10">
           <div className="logo">
             <Link to={"/home"}>
-              <img src="logo-new-.png"></img>
+              <img src="/logo-new-.png"></img>
             </Link>
           </div>
           <SearchNav />

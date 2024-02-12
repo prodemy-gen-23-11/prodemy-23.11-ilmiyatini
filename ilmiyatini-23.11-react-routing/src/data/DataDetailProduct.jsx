@@ -10,12 +10,12 @@ export default function DataDetailProduct() {
       beforePrice: 1.999,
       price: 1.099,
       discount: 45,
-      image: "smeg-black.png",
+      image: "/smeg-black.png",
       additionalImages: [
-        "smeg-red.png",
-        "smeg-pink.png",
-        "smeg-black.png",
-        "smeg-cream.png",
+        "/smeg-red.png",
+        "/smeg-pink.png",
+        "/smeg-black.png",
+        "/smeg-cream.png",
       ],
       descriptions: [
         "Brand : SMEG",
@@ -34,11 +34,11 @@ export default function DataDetailProduct() {
       beforePrice: 21.428,
       price: 19.285,
       discount: 10,
-      image: "Victoria_Arduino_VA388_Black_Eagle_T3_3_Group__Copper_.png",
+      image: "/Victoria_Arduino_VA388_Black_Eagle_T3_3_Group__Copper_.png",
       additionalImages: [
-        "Victoria_Arduino_VA388_Black_Eagle_T3_3_Group__Copper_2.jpg",
+        "/Victoria_Arduino_VA388_Black_Eagle_T3_3_Group__Copper_2.jpg",
 
-        "Victoria_Arduino_VA388_Black_Eagle_T3_3_Group__Copper_.png",
+        "/Victoria_Arduino_VA388_Black_Eagle_T3_3_Group__Copper_.png",
       ],
       descriptions: [
         "Height : 49 cm",
@@ -57,8 +57,8 @@ export default function DataDetailProduct() {
       beforePrice: 714,
       price: 526,
       discount: 25,
-      image: "Hario_BGS-400_Beam_Heater_220V.png",
-      additionalImages: ["Hario_BGS-400_Beam_Heater_220V.png"],
+      image: "/Hario_BGS-400_Beam_Heater_220V.png",
+      additionalImages: ["/Hario_BGS-400_Beam_Heater_220V.png"],
       descriptions: [
         "Article No. : BGS-400",
         "New ETL-certified Halogen Beam Heater",
@@ -76,8 +76,8 @@ export default function DataDetailProduct() {
       beforePrice: 24,
       price: 21,
       discount: 15,
-      image: "Hario_M-12CP_Spoon__Copper.png",
-      additionalImages: ["Hario_BGS-400_Beam_Heater_220V.png"],
+      image: "/Hario_M-12CP_Spoon__Copper.png",
+      additionalImages: ["/Hario_BGS-400_Beam_Heater_220V.png"],
       descriptions: [
         "Brand : Hario",
         "Article No. : M-12CP",
@@ -95,11 +95,11 @@ export default function DataDetailProduct() {
       beforePrice: 2428,
       price: 1214,
       discount: 50,
-      image: "Nuova_Simonelli_Grinder_MDXS_On_Demand.png",
+      image: "/Nuova_Simonelli_Grinder_MDXS_On_Demand.png",
       additionalImages: [
-        "Nuova_Simonelli_Grinder_MDXS_On_Demand-red.jpg",
-        "Nuova_Simonelli_Grinder_MDXS_On_Demand-white.jpg",
-        "Nuova_Simonelli_Grinder_MDXS_On_Demand.png",
+        "/Nuova_Simonelli_Grinder_MDXS_On_Demand-red.jpg",
+        "/Nuova_Simonelli_Grinder_MDXS_On_Demand-white.jpg",
+        "/Nuova_Simonelli_Grinder_MDXS_On_Demand.png",
         ,
       ],
       descriptions: [
@@ -117,10 +117,10 @@ export default function DataDetailProduct() {
       id: 6,
       name: "Victoria Arduino Mythos MYG75",
       price: 3.642,
-      image: "Victoria_Ardunio_Mythos_MY85__Black_.png",
+      image: "/Victoria_Ardunio_Mythos_MY85__Black_.png",
       additionalImages: [
-        "Victoria_Ardunio_Mythos_MY85__Black_.png",
-        "Victoria_Arduino_Mythos_MYG75__White_.png",
+        "/Victoria_Ardunio_Mythos_MY85__Black_.png",
+        "/Victoria_Arduino_Mythos_MYG75__White_.png",
       ],
       descriptions: [
         "Dosage : Gravimetric",
@@ -137,8 +137,8 @@ export default function DataDetailProduct() {
       id: 7,
       name: "Kolb Atollspeed Easy (K02-3005TIS) Silver",
       price: 6.392,
-      image: "Kolb_Atollspeed_Easy__K02-3005TIS__Silver-.png",
-      additionalImages: ["Kolb_Atollspeed_Easy__K02-3005TIS__Silver-.png"],
+      image: "/Kolb_Atollspeed_Easy__K02-3005TIS__Silver-.png",
+      additionalImages: ["/Kolb_Atollspeed_Easy__K02-3005TIS__Silver-.png"],
       descriptions: [
         "Brand : KOLB",
         "Outside Dimensions (WxDxH) : 445 x 687 x 570 mm",
@@ -154,8 +154,8 @@ export default function DataDetailProduct() {
       id: 8,
       name: " Robot Coupe Power Mixer 165 Micromix (34900)",
       price: 393,
-      image: "Robot_Coupe_Power_Mixer_165_Micromix__34900_.png",
-      additionalImages: ["Robot_Coupe_Power_Mixer_165_Micromix__34900_.png"],
+      image: "/Robot_Coupe_Power_Mixer_165_Micromix__34900_.png",
+      additionalImages: ["/Robot_Coupe_Power_Mixer_165_Micromix__34900_.png"],
       descriptions: [
         "Brand : Robot Coupe",
         "Power : 220 W",
@@ -171,8 +171,10 @@ export default function DataDetailProduct() {
       id: 9,
       name: " SMEG ALFA43X Electric Oven 4 Trays 435 x 320 mm",
       price: 1392,
-      image: "SMEG_ALFA43X_Electric_Oven_4_Trays_435_x_320_mm.png",
-      additionalImages: ["SMEG_ALFA43X_Electric_Oven_4_Trays_435_x_320_mm.png"],
+      image: "/SMEG_ALFA43X_Electric_Oven_4_Trays_435_x_320_mm.png",
+      additionalImages: [
+        "/SMEG_ALFA43X_Electric_Oven_4_Trays_435_x_320_mm.png",
+      ],
       descriptions: [
         "Brand : SMEG",
         "Dimensions (cm) (WXDXH) : 60.2 x 58.4 x 32",
@@ -188,10 +190,10 @@ export default function DataDetailProduct() {
       id: 10,
       name: "Victoria Arduino Mythos MYG75",
       price: 3.642,
-      image: "Victoria_Ardunio_Mythos_MY85__Black_.png",
+      image: "/Victoria_Ardunio_Mythos_MY85__Black_.png",
       additionalImages: [
-        "Victoria_Ardunio_Mythos_MY85__Black_.png",
-        "Victoria_Arduino_Mythos_MYG75__White_.png",
+        "/Victoria_Ardunio_Mythos_MY85__Black_.png",
+        "/Victoria_Arduino_Mythos_MYG75__White_.png",
       ],
       descriptions: [
         "Dosage : Gravimetric",
