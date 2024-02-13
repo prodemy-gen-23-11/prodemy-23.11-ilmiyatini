@@ -1,23 +1,26 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../index.css";
 import Button from "./Button";
 
 function MainProductCard(props) {
   const {
+    id,
     name,
     beforePrice,
     price,
     discount,
-    image,
     additionalImages,
     descriptions,
   } = props;
-  const [mainImage, setMainImage] = useState(image);
+
+  const [mainImage, setMainImage] = useState(additionalImages[0]);
 
   const handleImageClick = (imageUrl) => {
     setMainImage(imageUrl);
   };
-
+  useEffect(() => {
+    handleImageClick(additionalImages[0]);
+  }, [id]);
   return (
     <div className="product-card">
       <div className="container-image-all">

@@ -12,9 +12,9 @@ export default function DataDetailProduct() {
       discount: 45,
       image: "/smeg-black.png",
       additionalImages: [
+        "/smeg-black.png",
         "/smeg-red.png",
         "/smeg-pink.png",
-        "/smeg-black.png",
         "/smeg-cream.png",
       ],
       descriptions: [
@@ -36,9 +36,8 @@ export default function DataDetailProduct() {
       discount: 10,
       image: "/Victoria_Arduino_VA388_Black_Eagle_T3_3_Group__Copper_.png",
       additionalImages: [
-        "/Victoria_Arduino_VA388_Black_Eagle_T3_3_Group__Copper_2.jpg",
-
         "/Victoria_Arduino_VA388_Black_Eagle_T3_3_Group__Copper_.png",
+        "/Victoria_Arduino_VA388_Black_Eagle_T3_3_Group__Copper_2.jpg",
       ],
       descriptions: [
         "Height : 49 cm",
@@ -97,10 +96,9 @@ export default function DataDetailProduct() {
       discount: 50,
       image: "/Nuova_Simonelli_Grinder_MDXS_On_Demand.png",
       additionalImages: [
-        "/Nuova_Simonelli_Grinder_MDXS_On_Demand-red.jpg",
-        "/Nuova_Simonelli_Grinder_MDXS_On_Demand-white.jpg",
         "/Nuova_Simonelli_Grinder_MDXS_On_Demand.png",
-        ,
+        "/Nuova_Simonelli_Grinder_MDXS_On_Demand-red.png",
+        "/Nuova_Simonelli_Grinder_MDXS_On_Demand-white.png",
       ],
       descriptions: [
         "Brand : Nuova Simonelli",
