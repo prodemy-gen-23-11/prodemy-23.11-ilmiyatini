@@ -184,10 +184,10 @@
       "id": 10,
       "name": "Victoria Arduino Mythos MYG75",
       "price": 3642,
-      "image": "/Victoria_Ardunio_Mythos_MY85__Black_.png",
+      "image": "/Victoria_Arduino_Mythos_MYG75__White_.png",
       "additionalImages": [
-        "/Victoria_Ardunio_Mythos_MY85__Black_.png",
-        "/Victoria_Arduino_Mythos_MYG75__White_.png"
+        "/Victoria_Arduino_Mythos_MYG75__White_.png",
+        "/Victoria_Ardunio_Mythos_MY85__Black_.png"
       ],
       "descriptions": [
         "Dosage: Gravimetric",
