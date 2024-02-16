@@ -1,8 +1,7 @@
 import React from "react";
-
-import Header from "../layout/Header";
-import ProductListWN from "./WhatsNew";
 import ProductList from "./BestPrices";
+import ProductListWN from "./WhatsNew";
+import Header from "../layout/Header";
 
 export default function CardList() {
   return (

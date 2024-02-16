@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
-import ProductCard from "../components/ProductCard";
+import ProductCard from "./ProductCard";
 import axios from "axios";
 import useSWR from "swr";
 import { BeatLoader } from "react-spinners";
 
 export default function ProductListWN() {
   const getProducts = (url) => axios.get(url).then((response) => response.data);
-  const { data, isLoading, error } = useSWR(
+  const { data, isLoading, error, mutate } = useSWR(
     "http://localhost:3000/products",
     getProducts
   );
@@ -25,7 +25,7 @@ export default function ProductListWN() {
   return (
     <div className="my-5 mx-20">
       {isLoading ? (
-        <BeatLoader color="#f5da42" />
+        <BeatLoader color="rgb(251 191 36)" />
       ) : (
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-x-5 gap-y-5 mx-auto">
           {data

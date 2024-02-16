@@ -1,6 +1,7 @@
 import React from "react";
-import ProductListWN from "../data/WhatsNew";
+
 import Header from "../layout/Header";
+import ProductListWN from "./WhatsNew";
 
 export default function ItemsWhatsNew() {
   return (

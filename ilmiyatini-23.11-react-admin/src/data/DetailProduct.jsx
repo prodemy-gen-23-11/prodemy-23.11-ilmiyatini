@@ -21,17 +21,13 @@ function DetailProduct() {
 
   if (error) {
     console.error("Error fetching product:", error);
-    return <div>Error loading product</div>;
-  }
-
-  if (!product) {
-    return <div>Product tidak ditemukan</div>;
+    return <div>Error fetching product </div>;
   }
 
   return (
     <div>
       {isLoading ? (
-        <BeatLoader color="#f5da42" />
+        <BeatLoader color="rgb(251 191 36)" />
       ) : (
         <MainProductCard {...product} />
       )}
