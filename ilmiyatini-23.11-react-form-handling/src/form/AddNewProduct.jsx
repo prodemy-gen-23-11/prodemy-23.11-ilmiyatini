@@ -54,7 +54,7 @@ export default function AddNewProduct() {
   };
 
   return (
-    <div className="bg-gray-100 p-5 m-5 rounded flex flex-col">
+    <div className="bg-gray-100 p-5 m-5 rounded">
       <div className="navigation-buttons my-2 flex space-x-3 ml-6">
         <Link to={`/admin`} className="home-back">
           <FontAwesomeIcon icon={faArrowLeft} className="mr-2" />
@@ -72,11 +72,12 @@ export default function AddNewProduct() {
         className="max-w-md mx-auto mt-8"
         onSubmit={(e) => handleSubmit(onSubmit)(e)}
       >
-        <label htmlFor="name" className="block mb-2">
+        <label htmlFor="name">
           <span className="text-gray-700">Product Name:</span>
         </label>
         <input
           type="text"
+          id="name"
           className="mt-1 p-2 block w-full border rounded-md focus:outline-none focus:border-amber-400"
           {...register("name")}
         />
@@ -89,6 +90,7 @@ export default function AddNewProduct() {
         </label>
         <input
           type="number"
+          id="price"
           className="mt-1 p-2 block w-full border rounded-md focus:outline-none focus:border-amber-400"
           {...register("price")}
         />
@@ -96,23 +98,26 @@ export default function AddNewProduct() {
           <p className="text-xs text-red-500">{errors.price.message}</p>
         )}
 
-        <label htmlFor="beforePrice" className="block mb-2">
+        <label htmlFor="beforePrice">
           <span className="text-gray-700">Before Price:</span>
         </label>
         <input
           type="number"
-          className="mt-1 p-2 block w-full border rounded-md focus:outline-none focus:border-amber-400"
+          id="beforePrice"
+          placeholder="Fill in the before price if the product is on discount."
+          className="mt-1 p-2 text-sm block w-full border rounded-md focus:outline-none focus:border-amber-400"
           {...register("beforePrice")}
         />
         {errors.beforePrice && (
           <p className="text-xs text-red-500">{errors.beforePrice.message}</p>
         )}
 
-        <label htmlFor="discount" className="block mb-2">
+        <label htmlFor="discount">
           <span className="text-gray-700">Discount (%):</span>
         </label>
         <input
           type="number"
+          id="discount"
           className="mt-1 p-2 block w-full border rounded-md focus:outline-none focus:border-amber-400"
           {...register("discount")}
         />
@@ -120,7 +125,7 @@ export default function AddNewProduct() {
           <p className="text-xs text-red-500">{errors.discount.message}</p>
         )}
 
-        <label htmlFor="images" className="block mb-2">
+        <label htmlFor="images">
           <span className="text-gray-700">Images:</span>
         </label>
         <div>
@@ -132,6 +137,7 @@ export default function AddNewProduct() {
           <input
             type="file"
             accept="image/*"
+            id="images"
             className="mt-1 p-2 block bg-amber-200 w-full border rounded-md focus:outline-none focus:border-amber-400"
             {...register("images")}
             multiple
@@ -147,7 +153,9 @@ export default function AddNewProduct() {
           <span className="text-gray-700">Descriptions (comma-separated) </span>
         </label>
         <textarea
-          className="mt-1 p-2 block w-full border rounded-md focus:outline-none focus:border-amber-400 mb-2"
+          id="descriptions"
+          placeholder="If there is more than one description, separate them with commas."
+          className="mt-1 p-2 text-sm block w-full border rounded-md focus:outline-none focus:border-amber-400 mb-2"
           {...register("descriptions")}
         />
         {errors.descriptions && (
