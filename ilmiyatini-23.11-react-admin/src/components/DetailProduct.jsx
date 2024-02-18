@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import MainProductCard from "../components/MainProductCard";
+import MainProductCard from "./MainProductCard";
 import axios from "axios";
 import useSWR from "swr";
 import { BeatLoader } from "react-spinners";
