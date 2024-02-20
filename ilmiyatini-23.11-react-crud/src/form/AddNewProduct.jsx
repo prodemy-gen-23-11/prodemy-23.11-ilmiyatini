@@ -5,6 +5,8 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import { Link } from "react-router-dom";
 import * as Yup from "yup";
 import { useState } from "react";
+import axios from "axios";
+import Swal from "sweetalert2";
 
 const validationSchema = Yup.object().shape({
   name: Yup.string().required("Product Name is required"),
@@ -32,27 +34,69 @@ export default function AddNewProduct() {
     }
   };
 
-  const onSubmit = (data, e) => {
-    const descriptionsArray = data.descriptions
-      .split(",")
-      .map((desc) => desc.trim());
-    const beforePrices = (100 * data.price) / (100 - data.discount);
-    const filteredProductData = {
-      name: data.name,
-      ...(data.discount && { beforePrice: beforePrices }),
-      price: data.price,
-      ...(data.discount && { discount: data.discount }),
-      image: selectedImages[0],
-      additionalImages: selectedImages,
-      descriptions: descriptionsArray,
-    };
-    console.log(
-      "Submitted data:",
-      JSON.stringify(filteredProductData, null, 2)
-    );
-    alert("Product added successfully!");
-    setSelectedImages([]);
-    e.target.reset();
+  const onSubmit = async (data, e) => {
+    try {
+      const fetchResponse = await axios.get("http://localhost:3000/products");
+      const productsData = fetchResponse.data;
+      const highestId = Math.max(
+        ...productsData.map((product) => product.id),
+        0
+      );
+      const newProductId = highestId + 1;
+
+      const descriptionsArray = data.descriptions
+        .split(",")
+        .map((desc) => desc.trim());
+      const beforePrices = parseInt((100 * data.price) / (100 - data.discount));
+      const filteredProductData = {
+        id: newProductId,
+        name: data.name,
+        ...(data.discount && { beforePrice: beforePrices }),
+        price: data.price,
+        ...(data.discount && { discount: data.discount }),
+        image: selectedImages[0],
+        additionalImages: selectedImages,
+        descriptions: descriptionsArray,
+      };
+
+      const postResponse = await axios.post(
+        "http://localhost:3000/products",
+        filteredProductData
+      );
+
+      if (postResponse.status >= 200 && postResponse.status < 300) {
+        console.log("Product added successfully!");
+        console.log(
+          "Submitted data:",
+          JSON.stringify(filteredProductData, null, 2)
+        );
+        Swal.fire({
+          icon: "success",
+          title: "Product added successfully!",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        // alert("Product added successfully!");
+        e.target.reset();
+        setSelectedImages([]);
+      } else {
+        console.error("Error adding product:", postResponse.statusText);
+        Swal.fire({
+          icon: "error",
+          title: "Oops... Something went wrong!",
+          text: "Error adding product. Please try again.",
+        });
+        // alert("Error adding product. Please try again.");
+      }
+    } catch (error) {
+      console.error("An unexpected error occurred:", error);
+      Swal.fire({
+        icon: "error",
+        title: "Oops... Something went wrong!",
+        text: "An unexpected error occurred. Please try again.",
+      });
+      // alert("An unexpected error occurred. Please try again.");
+    }
   };
 
   return (
@@ -99,17 +143,6 @@ export default function AddNewProduct() {
         {errors.price && (
           <p className="text-xs text-red-500">{errors.price.message}</p>
         )}
-        {/* 
-        <label htmlFor="beforePrice">
-          <span className="text-gray-700">Before Price:</span>
-        </label>
-        <input
-          type="number"
-          id="beforePrice"
-          placeholder="Fill in the before price if the product is on discount."
-          className="mt-1 p-2 text-sm block w-full border rounded-md focus:outline-none focus:border-amber-400"
-          {...register("beforePrice")}
-        /> */}
 
         <label htmlFor="discount">
           <span className="text-gray-700">Discount (%):</span>

@@ -13,7 +13,7 @@
     @apply flex flex-col;
   }
   .home-back {
-    @apply flex text-xs items-center mx-4 bg-amber-300 hover:bg-amber-400 text-white font-bold py-2 px-4 rounded transition duration-300;
+    @apply flex text-[10px] md:text-xs items-center mx-4 bg-amber-300 hover:bg-amber-400 text-white font-bold py-1 md:py-2 px-2 md:px-4 rounded transition duration-300;
   }
   .tools-bar {
     @apply flex items-start p-4 ml-4 cursor-pointer flex-wrap;

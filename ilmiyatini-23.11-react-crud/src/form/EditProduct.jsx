@@ -2,27 +2,55 @@ import { faArrowLeft, faHome } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import * as Yup from "yup";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import useSWR from "swr";
+import axios from "axios";
+import Swal from "sweetalert2";
 
 const validationSchema = Yup.object().shape({
   name: Yup.string().required("Product Name is required"),
   price: Yup.number().required("Price is required"),
-  images: Yup.string().required("At least one image is required"),
+  // images: Yup.string().required("At least one image is required"),
   descriptions: Yup.string().required("Description is required"),
 });
 
-export default function AddNewProduct() {
+export default function EditProduct() {
+  const { id } = useParams();
   const [selectedImages, setSelectedImages] = useState([]);
 
   const {
     register,
     handleSubmit,
+    setValue,
     formState: { errors },
   } = useForm({
     resolver: yupResolver(validationSchema),
   });
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const fetchResponse = await axios.get(
+          `http://localhost:3000/products/${id}`
+        );
+        const productData = fetchResponse.data;
+
+        setValue("name", productData.name);
+        setValue("price", productData.price);
+        setValue("discount", productData.discount || "");
+        setValue("images", productData.additionalImages || []);
+        setValue("descriptions", productData.descriptions.join(", "));
+        setSelectedImages(productData.additionalImages || []);
+      } catch (error) {
+        console.error("Error fetching product data:", error);
+      }
+    };
+
+    fetchData();
+  }, [id, setValue]);
+
   const handleImageChange = (e) => {
     const files = e.target.files;
 
@@ -32,27 +60,59 @@ export default function AddNewProduct() {
     }
   };
 
-  const onSubmit = (data, e) => {
-    const descriptionsArray = data.descriptions
-      .split(",")
-      .map((desc) => desc.trim());
-    const beforePrices = (100 * data.price) / (100 - data.discount);
-    const filteredProductData = {
-      name: data.name,
-      ...(data.discount && { beforePrice: beforePrices }),
-      price: data.price,
-      ...(data.discount && { discount: data.discount }),
-      image: selectedImages[0],
-      additionalImages: selectedImages,
-      descriptions: descriptionsArray,
-    };
-    console.log(
-      "Submitted data:",
-      JSON.stringify(filteredProductData, null, 2)
-    );
-    alert("Product added successfully!");
-    setSelectedImages([]);
-    e.target.reset();
+  const onSubmit = async (data) => {
+    try {
+      const beforePrices = parseInt(
+        (100 * data.price) / (100 - parseInt(data.discount))
+      );
+      const updatedProductData = {
+        name: data.name,
+        ...(data.discount && { beforePrice: beforePrices }),
+        ...(data.discount && { discount: parseInt(data.discount) }),
+        price: data.price,
+        image: selectedImages[0],
+        additionalImages: selectedImages,
+        descriptions: data.descriptions.split(",").map((desc) => desc.trim()),
+      };
+
+      const updateResponse = await axios.put(
+        `http://localhost:3000/products/${id}`,
+        updatedProductData
+      );
+
+      if (updateResponse.status >= 200 && updateResponse.status < 300) {
+        console.log("Product updated successfully!");
+        console.log(
+          "Submitted data:",
+          JSON.stringify(updatedProductData, null, 2)
+        );
+        Swal.fire({
+          icon: "success",
+          title: "Product updated successfully!",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        // alert("Product updated successfully!");
+        // e.target.reset();
+        // setSelectedImages([]);
+        // mutate();
+      } else {
+        console.error("Error updating product:", updateResponse.statusText);
+        Swal.fire({
+          icon: "error",
+          title: "Oops... Something went wrong!",
+          text: "Error updating product. Please try again.",
+        });
+        // alert("Error updating product. Please try again.");
+      }
+    } catch (error) {
+      console.error("An unexpected error occurred:", error);
+      Swal.fire({
+        icon: "error",
+        title: "Oops... Something went wrong!",
+        text: "An unexpected error occurred. Please try again.",
+      });
+    }
   };
 
   return (
@@ -68,7 +128,7 @@ export default function AddNewProduct() {
         </Link>
       </div>
       <h1 className="text-center border border-amber-300 my-2 mx-10 p-2 rounded text-amber-300 bg-amber-100">
-        <strong>Add New Product</strong>
+        <strong>Edit Product</strong>
       </h1>
       <form
         className="max-w-md mx-auto mt-8"
@@ -99,17 +159,6 @@ export default function AddNewProduct() {
         {errors.price && (
           <p className="text-xs text-red-500">{errors.price.message}</p>
         )}
-        {/* 
-        <label htmlFor="beforePrice">
-          <span className="text-gray-700">Before Price:</span>
-        </label>
-        <input
-          type="number"
-          id="beforePrice"
-          placeholder="Fill in the before price if the product is on discount."
-          className="mt-1 p-2 text-sm block w-full border rounded-md focus:outline-none focus:border-amber-400"
-          {...register("beforePrice")}
-        /> */}
 
         <label htmlFor="discount">
           <span className="text-gray-700">Discount (%):</span>
