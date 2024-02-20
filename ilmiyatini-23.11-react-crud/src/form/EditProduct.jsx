@@ -92,7 +92,7 @@ export default function EditProduct() {
           showConfirmButton: false,
           timer: 1500,
         });
-        // alert("Product updated successfully!");
+
         // e.target.reset();
         // setSelectedImages([]);
         // mutate();
@@ -103,7 +103,6 @@ export default function EditProduct() {
           title: "Oops... Something went wrong!",
           text: "Error updating product. Please try again.",
         });
-        // alert("Error updating product. Please try again.");
       }
     } catch (error) {
       console.error("An unexpected error occurred:", error);

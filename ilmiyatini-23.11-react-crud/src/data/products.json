@@ -1,10 +1,11 @@
 {
   "products": [
     {
+      "id": 1,
       "name": "Victoria Arduino VA388 Black Eagle T3 2 Group (Copper)",
-      "beforePrice": 21427,
-      "discount": 10,
+      "beforePrice": 21428,
       "price": 19285,
+      "discount": 10,
       "image": "/Victoria_Arduino_VA388_Black_Eagle_T3_3_Group__Copper_.png",
       "additionalImages": [
         "/Victoria_Arduino_VA388_Black_Eagle_T3_3_Group__Copper_.png",
@@ -19,19 +20,16 @@
         "Boiler Size: 11.4 lt",
         "Boiler Type: Multi Boiler",
         "Power: 7300 watt"
-      ],
-      "id": "1"
+      ]
     },
     {
-      "id": "2",
+      "id": 2,
       "name": "Hario BGS-400 Beam Heater 220V",
       "beforePrice": 714,
       "price": 526,
       "discount": 25,
       "image": "/Hario_BGS-400_Beam_Heater_220V.png",
-      "additionalImages": [
-        "/Hario_BGS-400_Beam_Heater_220V.png"
-      ],
+      "additionalImages": ["/Hario_BGS-400_Beam_Heater_220V.png"],
       "descriptions": [
         "Article No.: BGS-400",
         "New ETL-certified Halogen Beam Heater",
@@ -44,7 +42,7 @@
       ]
     },
     {
-      "id": "3",
+      "id": 3,
       "name": "SMEG Stand Mixer (SMF02)",
       "beforePrice": 1999,
       "price": 1099,
@@ -68,15 +66,13 @@
       ]
     },
     {
-      "id": "4",
+      "id": 4,
       "name": "Hario M-12CP Spoon (Copper)",
       "beforePrice": 24,
       "price": 21,
       "discount": 15,
       "image": "/Hario_M-12CP_Spoon__Copper.png",
-      "additionalImages": [
-        "/Hario_M-12CP_Spoon__Copper.png"
-      ],
+      "additionalImages": ["/Hario_M-12CP_Spoon__Copper.png"],
       "descriptions": [
         "Brand: Hario",
         "Article No.: M-12CP",
@@ -89,10 +85,11 @@
       ]
     },
     {
+      "id": 5,
       "name": "Nuova Simonelli Grinder MDXS On Demand",
       "beforePrice": 2428,
-      "discount": 50,
       "price": 1214,
+      "discount": 50,
       "image": "/Nuova_Simonelli_Grinder_MDXS_On_Demand.png",
       "additionalImages": [
         "/Nuova_Simonelli_Grinder_MDXS_On_Demand.png",
@@ -108,11 +105,10 @@
         "Burr Size: Flat 65 mm",
         "Daily Production: 9 kg",
         "Type of Grinding: Micrometric"
-      ],
-      "id": "5"
+      ]
     },
     {
-      "id": "6",
+      "id": 6,
       "name": "Victoria Arduino Mythos MYG75",
       "price": 3642,
       "image": "/Victoria_Ardunio_Mythos_MY85__Black_.png",
@@ -132,13 +128,11 @@
       ]
     },
     {
-      "id": "7",
+      "id": 7,
       "name": "Kolb Atollspeed Easy (K02-3005TIS) Silver",
       "price": 6392,
       "image": "/Kolb_Atollspeed_Easy__K02-3005TIS__Silver-.png",
-      "additionalImages": [
-        "/Kolb_Atollspeed_Easy__K02-3005TIS__Silver-.png"
-      ],
+      "additionalImages": ["/Kolb_Atollspeed_Easy__K02-3005TIS__Silver-.png"],
       "descriptions": [
         "Brand: KOLB",
         "Outside Dimensions (WxDxH): 445 x 687 x 570 mm",
@@ -151,13 +145,11 @@
       ]
     },
     {
-      "id": "8",
+      "id": 8,
       "name": "Robot Coupe Power Mixer 165 Micromix (34900)",
       "price": 393,
       "image": "/Robot_Coupe_Power_Mixer_165_Micromix__34900_.png",
-      "additionalImages": [
-        "/Robot_Coupe_Power_Mixer_165_Micromix__34900_.png"
-      ],
+      "additionalImages": ["/Robot_Coupe_Power_Mixer_165_Micromix__34900_.png"],
       "descriptions": [
         "Brand: Robot Coupe",
         "Power: 220 W",
@@ -170,7 +162,7 @@
       ]
     },
     {
-      "id": "9",
+      "id": 9,
       "name": "SMEG ALFA43X Electric Oven 4 Trays 435 x 320 mm",
       "price": 1392,
       "image": "/SMEG_ALFA43X_Electric_Oven_4_Trays_435_x_320_mm.png",
@@ -189,7 +181,7 @@
       ]
     },
     {
-      "id": "10",
+      "id": 10,
       "name": "Victoria Arduino Mythos MYG75",
       "price": 3642,
       "image": "/Victoria_Arduino_Mythos_MYG75__White_.png",

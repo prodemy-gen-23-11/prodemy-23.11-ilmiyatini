@@ -76,7 +76,6 @@ export default function AddNewProduct() {
           showConfirmButton: false,
           timer: 1500,
         });
-        // alert("Product added successfully!");
         e.target.reset();
         setSelectedImages([]);
       } else {
@@ -86,7 +85,6 @@ export default function AddNewProduct() {
           title: "Oops... Something went wrong!",
           text: "Error adding product. Please try again.",
         });
-        // alert("Error adding product. Please try again.");
       }
     } catch (error) {
       console.error("An unexpected error occurred:", error);
@@ -95,7 +93,6 @@ export default function AddNewProduct() {
         title: "Oops... Something went wrong!",
         text: "An unexpected error occurred. Please try again.",
       });
-      // alert("An unexpected error occurred. Please try again.");
     }
   };
 
