@@ -9,11 +9,13 @@ import ToHome from "./components/ToHome";
 import Admin from "./pages/Admin";
 import AddNewProduct from "./form/AddNewProduct";
 import EditProduct from "./form/EditProduct";
+import Coba from "./pages/Coba";
 
 export default function App() {
   return (
     <div>
       <Routes>
+        <Route path="/coba" element={<Coba />} />
         <Route path="/admin/addNP" element={<AddNewProduct />} />
         <Route path="/admin/editProduct/:id" element={<EditProduct />} />
         <Route path="/admin" element={<Admin />} />
