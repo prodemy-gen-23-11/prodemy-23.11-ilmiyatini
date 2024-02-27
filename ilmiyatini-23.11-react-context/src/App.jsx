@@ -9,13 +9,13 @@ import ToHome from "./components/ToHome";
 import Admin from "./pages/Admin";
 import AddNewProduct from "./form/AddNewProduct";
 import EditProduct from "./form/EditProduct";
-import { CheckoutProvider } from "./context/CheckoutContext";
+import { CartProvider } from "./context/CartContext";
 import CartPage from "./pages/CartPage";
 
 export default function App() {
   return (
     <div>
-      <CheckoutProvider>
+      <CartProvider>
         <Routes>
           <Route path="/cartPage" element={<CartPage />} />
           <Route path="/admin/addNP" element={<AddNewProduct />} />
@@ -28,7 +28,7 @@ export default function App() {
           <Route path="/bestPrices" element={<ItemBestPrices />} />
           <Route path="/whatsNew" element={<ItemsWhatsNew />} />
         </Routes>
-      </CheckoutProvider>
+      </CartProvider>
     </div>
   );
 }

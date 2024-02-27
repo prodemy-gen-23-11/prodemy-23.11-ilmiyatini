@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { CheckoutContext } from "../context/CheckoutContext";
+import { CartContext } from "../context/CartContext";
 import { Link } from "react-router-dom";
 import Button from "../components/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -7,13 +7,13 @@ import { faArrowLeft, faHome } from "@fortawesome/free-solid-svg-icons";
 import Swal from "sweetalert2";
 
 function CartPage() {
-  const { dataCheckout, setDataCheckout } = useContext(CheckoutContext);
+  const { dataCart, setDataCart } = useContext(CartContext);
 
   const handleRemoveItem = (productId) => {
-    const updatedDataCheckout = dataCheckout.filter(
+    const updatedDataCart = dataCart.filter(
       (item) => item.productId !== productId
     );
-    setDataCheckout(updatedDataCheckout);
+    setDataCart(updatedDataCart);
   };
 
   return (
@@ -32,11 +32,11 @@ function CartPage() {
         <h1 className="text-xl font-bold mb-2">Shopping Cart</h1>
       </div>
 
-      {dataCheckout.length === 0 ? (
+      {dataCart.length === 0 ? (
         <p>Your cart is empty.</p>
       ) : (
         <div>
-          {dataCheckout.map((item) => (
+          {dataCart.map((item) => (
             <div
               key={item.productId}
               className="flex items-center border-b border-gray-300 py-4"

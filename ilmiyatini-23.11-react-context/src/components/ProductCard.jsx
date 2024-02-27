@@ -1,32 +1,32 @@
 import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import { CheckoutContext } from "../context/CheckoutContext";
+import { CartContext } from "../context/CartContext";
 
 function ProductCard(props) {
   const { id, imageSrc, productName, price, beforePrice, diskon, onClick } =
     props;
   const navigate = useNavigate();
-  const { dataCheckout, setDataCheckout } = useContext(CheckoutContext);
+  const { dataCart, setDataCart } = useContext(CartContext);
 
   const onClickBrowse = () => {
     navigate(`/product/${id}`);
   };
 
   const handleAddToCart = () => {
-    const index = dataCheckout.findIndex((item) => item.productId === id);
+    const index = dataCart.findIndex((item) => item.productId === id);
     if (index !== -1) {
-      const newDataCheckout = [...dataCheckout];
-      newDataCheckout[index].quantity += 1;
-      setDataCheckout(newDataCheckout);
+      const newDataCart = [...dataCart];
+      newDataCart[index].quantity += 1;
+      setDataCart(newDataCart);
     } else {
-      const checkoutProduct = {
+      const CartProduct = {
         productId: id,
         productName: productName,
         price: price,
         image: imageSrc,
         quantity: 1,
       };
-      setDataCheckout((prevData) => [...prevData, checkoutProduct]);
+      setDataCart((prevData) => [...prevData, CartProduct]);
     }
 
     alert("Product added to cart successfully!");

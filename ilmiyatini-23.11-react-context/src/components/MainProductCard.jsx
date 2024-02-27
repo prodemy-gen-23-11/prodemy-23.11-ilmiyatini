@@ -4,7 +4,7 @@ import Button from "./Button";
 import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft, faHome } from "@fortawesome/free-solid-svg-icons";
-import { CheckoutContext } from "../context/CheckoutContext";
+import { CartContext } from "../context/CartContext";
 
 function MainProductCard(props) {
   const {
@@ -19,7 +19,7 @@ function MainProductCard(props) {
   const [mainImage, setMainImage] = useState(additionalImages[0]);
   const [qty, setQty] = useState(1);
   const navigate = useNavigate();
-  const { dataCheckout, setDataCheckout } = useContext(CheckoutContext);
+  const { dataCart, setDataCart } = useContext(CartContext);
 
   const handleImageClick = (imageUrl) => {
     setMainImage(imageUrl);
@@ -36,20 +36,20 @@ function MainProductCard(props) {
     }
   };
   const handleAddToCart = () => {
-    const index = dataCheckout.findIndex((item) => item.productId === id);
+    const index = dataCart.findIndex((item) => item.productId === id);
     if (index !== -1) {
-      const newDataCheckout = [...dataCheckout];
-      newDataCheckout[index].quantity += qty;
-      setDataCheckout(newDataCheckout);
+      const newDataCart = [...dataCart];
+      newDataCart[index].quantity += qty;
+      setDataCart(newDataCart);
     } else {
-      const checkoutProduct = {
+      const cartProduct = {
         productId: id,
         productName: name,
         price: price,
         image: additionalImages[0],
-        quantity: 1,
+        quantity: qty,
       };
-      setDataCheckout((prevData) => [...prevData, checkoutProduct]);
+      setDataCart((prevData) => [...prevData, cartProduct]);
     }
 
     alert("Product added to cart successfully!");
