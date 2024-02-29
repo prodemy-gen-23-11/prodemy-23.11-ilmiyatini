@@ -7,12 +7,24 @@ import Swal from "sweetalert2";
 import { useDispatch, useSelector } from "react-redux";
 import { useState } from "react";
 import { useEffect } from "react";
-import { removeFromCart } from "../store/actions/cartActions";
+import {
+  decrementQuantity,
+  incrementQuantity,
+  removeFromCart,
+} from "../store/reducers/cartReducer";
 
 function CartPage() {
   const cartItems = useSelector((state) => state.cart.dataCart);
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
+  const incrementQty = (productId) => {
+    dispatch(incrementQuantity(productId));
+  };
+
+  const decrementQty = (productId) => {
+    dispatch(decrementQuantity(productId));
+  };
 
   const [totalPrice, setTotalPrice] = useState(0);
   useEffect(() => {
@@ -50,7 +62,7 @@ function CartPage() {
           {cartItems.map((item) => (
             <div
               key={item.productId}
-              className="flex items-center border-b border-gray-300 py-4"
+              className="flex items-center border border-yellow-400 m-4 p-2"
             >
               <div className="w-1/4">
                 <img
@@ -61,10 +73,31 @@ function CartPage() {
               </div>
               <div className="w-1/2 px-4">
                 <h2 className="text-lg font-bold">{item.productName}</h2>
-                <p className="text-sm text-gray-500">Price: ${item.price}</p>
-                <p className="text-sm text-gray-500">
-                  Quantity: {item.quantity}
-                </p>
+                <p className="text-sm ">Price: ${item.price}</p>
+                <div className="flex flex-col md:flex-row items-center md:space-x-4 mt-2 ">
+                  <span className="text-sm mb-2 md:mb-0">Quantity :</span>
+                  <div className="flex items-center space-x-4">
+                    <button
+                      className="bg-amber-400 text-white text-xs px-3 py-1 rounded transition duration-300 hover:bg-amber-400 focus:ring"
+                      onClick={() => decrementQty(item.productId)}
+                    >
+                      −
+                    </button>
+                    <input
+                      type="number"
+                      className="text-xs rounded border border-yellow-400 px-3 py-1 w-16 text-center focus:outline-none"
+                      name="qty"
+                      value={item.quantity}
+                      disabled
+                    />
+                    <button
+                      className="bg-amber-400 text-white text-xs px-3 py-1 rounded transition duration-300 hover:bg-amber-400 focus:ring"
+                      onClick={() => incrementQty(item.productId)}
+                    >
+                      +
+                    </button>
+                  </div>
+                </div>
               </div>
               <div className="w-1/4 text-right pr-4">
                 <Button
@@ -82,9 +115,7 @@ function CartPage() {
                       confirmButtonText: "Yes, remove it!",
                     }).then((result) => {
                       if (result.isConfirmed) {
-                        console.log("id:", item.productId);
                         dispatch(removeFromCart(item.productId));
-                        console.log(removeFromCart(item.productId));
                       }
                     });
                   }}
@@ -93,8 +124,13 @@ function CartPage() {
             </div>
           ))}
 
-          <div className="flex justify-end mt-6">
-            <div className="mr-5 mt-1">Total : ${totalPrice}</div>
+          <div className="flex justify-end mt-6 mr-5">
+            <div className="mr-5 ">
+              <span>Total : </span>
+              <span className="text-amber-400 font-bold text-xl">
+                ${totalPrice}
+              </span>
+            </div>
 
             <Button
               type="button"
