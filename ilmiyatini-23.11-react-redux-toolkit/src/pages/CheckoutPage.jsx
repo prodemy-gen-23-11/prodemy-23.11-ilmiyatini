@@ -8,6 +8,7 @@ import {
   clearCart,
   decrementQuantity,
   incrementQuantity,
+  removeFromCart,
 } from "../store/reducers/cartReducer";
 import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -29,8 +30,24 @@ function CheckoutPage() {
     dispatch(incrementQuantity(productId));
   };
 
-  const decrementQty = (productId) => {
-    dispatch(decrementQuantity(productId));
+  const decrementQty = (productId, quantity) => {
+    if (quantity > 1) {
+      dispatch(decrementQuantity(productId));
+    } else {
+      Swal.fire({
+        title: "Are you sure?",
+        text: "This will remove the product from your order.",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#d33",
+        cancelButtonColor: "#3085d6",
+        confirmButtonText: "Yes, remove it!",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          dispatch(removeFromCart(productId));
+        }
+      });
+    }
   };
 
   const {
@@ -100,7 +117,7 @@ function CheckoutPage() {
               <div className="flex items-center space-x-4">
                 <button
                   className="bg-amber-400 text-white text-xs px-3 py-1 rounded transition duration-300 hover:bg-amber-400 focus:ring"
-                  onClick={() => decrementQty(item.productId)}
+                  onClick={() => decrementQty(item.productId, item.quantity)}
                 >
                   −
                 </button>

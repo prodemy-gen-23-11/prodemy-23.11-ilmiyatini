@@ -75,11 +75,12 @@ function MainProductCard(props) {
       title: "Product added to cart successfully!",
       showConfirmButton: true,
       confirmButtonText: "OK",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        navigate("/cartPage");
-      }
     });
+    // .then((result) => {
+    //   if (result.isConfirmed) {
+    //     navigate("/cartPage");
+    //   }
+    // });
   };
   return (
     <div className="border border-gray-200 p-4 bg-amber-100 rounded-md mt-4 mx-4">

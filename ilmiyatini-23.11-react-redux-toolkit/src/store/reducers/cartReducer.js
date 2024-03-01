@@ -31,7 +31,7 @@ const cartSlice = createSlice({
     decrementQuantity: (state, action) => {
       state.dataCart = state.dataCart.map((item) =>
         item.productId === action.payload
-          ? { ...item, quantity: Math.max(1, item.quantity - 1) }
+          ? { ...item, quantity: Math.max(0, item.quantity - 1) }
           : item
       );
     },

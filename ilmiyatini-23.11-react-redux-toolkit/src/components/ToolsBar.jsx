@@ -2,6 +2,7 @@ import { faUserCog } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import { FaUser, FaHeart, FaShoppingCart } from "react-icons/fa";
+import { useSelector } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 
 const ToolsBar = () => {
@@ -9,6 +10,7 @@ const ToolsBar = () => {
   const navigateToAdmin = () => {
     navigate("/admin");
   };
+  const cartItems = useSelector((state) => state.cart.dataCart);
   return (
     <div className="tools-bar">
       <div className="tool">
@@ -20,8 +22,15 @@ const ToolsBar = () => {
         <span>Wishlist</span>
       </div>
       <Link to={"/cartPage"}>
-        <div className="tool">
+        <div className="tool relative">
           <FaShoppingCart />
+          {cartItems.length > 0 && (
+            <span className="absolute -right-4 -top-2 bg-red-500 rounded-full text-white ">
+              <div className="flex items-center justify-center w-4 h-4 ">
+                {cartItems.length}
+              </div>
+            </span>
+          )}
           <span>Cart</span>
         </div>
       </Link>

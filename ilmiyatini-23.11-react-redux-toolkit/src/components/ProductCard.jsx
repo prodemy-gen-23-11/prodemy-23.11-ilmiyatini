@@ -40,13 +40,12 @@ function ProductCard(props) {
       title: "Product added to cart successfully!",
       showConfirmButton: true,
       confirmButtonText: "OK",
-    }).then((result) => {
-      if (result.isConfirmed) {
-        navigate("/cartPage");
-      }
     });
-
-    navigate("/cartPage");
+    // .then((result) => {
+    //   if (result.isConfirmed) {
+    //     navigate("/cartPage");
+    //   }
+    // });
   };
 
   return (
