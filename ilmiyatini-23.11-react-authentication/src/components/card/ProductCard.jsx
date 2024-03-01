@@ -10,11 +10,27 @@ function ProductCard(props) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.dataCart);
+  const isLoggedIn = useSelector((state) => state.auth.token !== "");
 
   const onClickBrowse = () => {
     navigate(`/product/${id}`);
   };
-
+  const navigateToLogin = () => {
+    Swal.fire({
+      title: "Hey there! It looks like you haven't logged in yet.",
+      text: "You need to log in to Checkout!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Yes, log in!",
+      cancelButtonText: "Cancel",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        navigate("/login");
+      } else {
+        navigate("/");
+      }
+    });
+  };
   const handleAddToCart = () => {
     const index = cartItems.findIndex((item) => item.productId === id);
     if (index !== -1) {
@@ -61,9 +77,21 @@ function ProductCard(props) {
             alt=""
             className="h-full w-full object-cover object-center"
           />
-          <button className="btn-cart hover:bg-black" onClick={handleAddToCart}>
-            <i className="fas fa-shopping-cart text-xs"></i> Add to Cart
-          </button>
+          {isLoggedIn ? (
+            <button
+              className="btn-cart hover:bg-black"
+              onClick={handleAddToCart}
+            >
+              <i className="fas fa-shopping-cart text-xs"></i> Add to Cart
+            </button>
+          ) : (
+            <button
+              className="btn-cart hover:bg-black"
+              onClick={navigateToLogin}
+            >
+              <i className="fas fa-shopping-cart text-xs"></i> Add to Cart
+            </button>
+          )}
         </div>
         <h3 className="text-sm text-gray-700 mx-4 mt-7">
           <a href="#">{productName}</a>

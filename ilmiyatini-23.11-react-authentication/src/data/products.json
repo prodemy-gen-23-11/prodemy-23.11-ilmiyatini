@@ -238,6 +238,27 @@
       "role": "user",
       "name": "Shawn Mendes",
       "id": 4
+    },
+    {
+      "email": "taylor@gmail.com",
+      "password": "$2a$10$P5K9hCnyzrp2PrumYSthY.7Jtb1cq5ZLmVZFWxX4O8aSZYOvLCyeO",
+      "role": "user",
+      "name": "Taylor Swift",
+      "id": 5
+    },
+    {
+      "email": "mbaIca@mail.com",
+      "password": "$2a$10$2qup/S/EvICUSlbRRyg/nuKKzrY7iswRTWHBhWez841dtjY5Y2Gkq",
+      "role": "user",
+      "name": "Mba Ica",
+      "id": 6
+    },
+    {
+      "email": "sahid@gmail.com",
+      "password": "$2a$10$o0BVjAnPIIhhntui69Tt4OEa22ksigRh2qGsTAJQIJEjeXapmk7sS",
+      "role": "user",
+      "name": "Sahid",
+      "id": 7
     }
   ]
 }

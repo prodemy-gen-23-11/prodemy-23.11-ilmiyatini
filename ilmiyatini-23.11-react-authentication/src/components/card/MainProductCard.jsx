@@ -23,6 +23,7 @@ function MainProductCard(props) {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.dataCart);
+  const isLoggedIn = useSelector((state) => state.auth.token !== "");
 
   const handleImageClick = (imageUrl) => {
     setMainImage(imageUrl);
@@ -49,6 +50,22 @@ function MainProductCard(props) {
     dispatch(addToCart(payload));
 
     navigate("/checkout");
+  };
+  const navigateToLogin = () => {
+    Swal.fire({
+      title: "Hey there! It looks like you haven't logged in yet.",
+      text: "You need to log in to Checkout!",
+      icon: "warning",
+      showCancelButton: true,
+      confirmButtonText: "Yes, log in!",
+      cancelButtonText: "Cancel",
+    }).then((result) => {
+      if (result.isConfirmed) {
+        navigate("/login");
+      } else {
+        navigate("/");
+      }
+    });
   };
   const handleAddToCart = () => {
     const index = cartItems.findIndex((item) => item.productId === id);
@@ -167,13 +184,23 @@ function MainProductCard(props) {
               variant="primary"
               onClick={handleBuyNow}
             />
-            <Button
-              type="button"
-              onClick={handleAddToCart}
-              label="Add to cart"
-              icon="fas fa-shopping-cart text-xs"
-              variant="secondary"
-            />
+            {isLoggedIn ? (
+              <Button
+                type="button"
+                onClick={handleAddToCart}
+                label="Add to cart"
+                icon="fas fa-shopping-cart text-xs"
+                variant="secondary"
+              />
+            ) : (
+              <Button
+                type="button"
+                onClick={navigateToLogin}
+                label="Add to cart"
+                icon="fas fa-shopping-cart text-xs"
+                variant="secondary"
+              />
+            )}
           </div>
           <p className="text-xs md:text-sm">
             Free shipping on all continental US orders.

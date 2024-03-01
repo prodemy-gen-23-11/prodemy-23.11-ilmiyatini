@@ -21,6 +21,7 @@ export default function App() {
       <Routes>
         <Route element={<PrivateRoutes />}>
           <Route path="/checkout" element={<CheckoutPage />} />
+          <Route path="/cartPage" element={<CartPage />} />
         </Route>
         <Route element={<AdminRoutes />}>
           <Route path="/admin/addNP" element={<AddNewProduct />} />
@@ -30,7 +31,6 @@ export default function App() {
         <Route path="/" element={<Home />} />
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/cartPage" element={<CartPage />} />
         <Route path="/product" element={<CardList />} />
         <Route path="/product/:id" element={<Detail />} />
         <Route path="/bestPrices" element={<ItemBestPrices />} />
