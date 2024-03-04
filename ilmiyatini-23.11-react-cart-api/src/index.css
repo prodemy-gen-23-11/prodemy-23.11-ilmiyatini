@@ -1,0 +1,199 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .Navbar {
+    @apply flex text-black w-full border-b-2 border-inherit justify-between md:justify-center overflow-auto p-2;
+  }
+  .logo img {
+    @apply items-center w-16 md:w-24;
+  }
+  .search-nav {
+    @apply flex flex-col;
+  }
+  .home-back {
+    @apply flex text-[10px] md:text-xs items-center bg-amber-300 hover:bg-amber-400 text-white font-bold py-1 md:py-2 px-2 md:px-4 rounded transition duration-300;
+  }
+  .tools-bar {
+    @apply flex items-start p-4 ml-4 cursor-pointer flex-wrap;
+  }
+
+  .tool {
+    @apply mr-4 lg:mr-8 flex items-center hover:text-amber-400 transition duration-150;
+  }
+
+  .tool svg {
+    @apply mr-1 text-amber-400;
+  }
+
+  .tool span {
+    @apply text-[10px] lg:text-xs;
+  }
+  .nav-link {
+    @apply hover:text-yellow-500 hover:shadow-md transition duration-150;
+  }
+  #search-form {
+    @apply relative my-2;
+  }
+  .promo-text {
+    @apply absolute italic text-xs md:text-sm top-2 md:top-4 text-white left-5 md:left-10 hover:scale-110 hover:text-amber-400 transition duration-150 cursor-pointer;
+  }
+  .up-size-title h1 {
+    @apply absolute top-16 md:top-40 left-5 md:left-10 cursor-pointer text-white md:text-xl hover:drop-shadow-md hover:text-lg lg:hover:text-2xl  transition duration-150 ease-in-out;
+  }
+  .up-size-title p {
+    @apply absolute text-xs md:text-base top-28 md:top-56 left-5 md:left-10 text-amber-400;
+  }
+  .shop-now {
+    @apply absolute top-2/3 md:top-72 left-5 md:left-10;
+  }
+  .btn-cart {
+    @apply absolute w-32 mt-5 text-xs top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-amber-300 text-white px-3 py-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300;
+  }
+  .discount {
+    margin-left: 6px;
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 0px 5px;
+    border-radius: 5px;
+    font-size: 9px;
+    cursor: pointer;
+  }
+  .container-categoriesImg {
+    @apply grid grid-cols-5 lg:grid-cols-6 gap-5 md:gap-10 lg:gap-20 mx-10 md:mx-20 my-5 text-center;
+  }
+  .footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .footer-section {
+    flex: 1 1 300px;
+    margin: 0 10px;
+  }
+
+  .footer-section h2 {
+    color: #f5c62e;
+    font-size: 15px;
+    margin-bottom: 4px;
+    margin-top: 12px;
+  }
+
+  .footer-ul ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .footer-ul ul li {
+    margin-bottom: 5px;
+  }
+  .footer-link {
+    @apply text-sm;
+  }
+
+  .footer-ul ul li a:hover {
+    text-decoration: underline;
+  }
+
+  .social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+  }
+
+  .social-icons li {
+    margin-right: 10px;
+  }
+
+  .footer-section img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .footer-section p {
+    margin: 5px 0;
+    font-size: 13px;
+  }
+
+  .download-btn {
+    background-color: #f5c62e;
+    color: #333;
+    padding: 8px 15px;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease, color 0.3s ease, font-size 0.3s ease;
+  }
+  .download-btn:hover {
+    background-color: rgb(82, 82, 82);
+    color: #f5c62e;
+    font-size: 14px;
+  }
+  .product-features {
+    @apply w-full flex-none text-xs md:text-sm font-light text-slate-700 mt-2;
+  }
+
+  .footer-bottom {
+    margin-top: 20px;
+    text-align: center;
+  }
+
+  .footer-bottom p {
+    font-size: 12px;
+    margin: 0;
+  }
+  .product-card {
+    @apply flex font-sans mt-4 mx-4 flex-col md:flex-row;
+  }
+  .container-image-all {
+    @apply flex-none w-full md:w-80 relative overflow-x-auto;
+  }
+  .image-container {
+    @apply w-auto rounded-md bg-gray-200 hover:scale-105 hover:shadow-md transition duration-300 mb-2;
+    cursor: pointer;
+  }
+
+  .additional-images {
+    @apply flex flex-wrap mt-2 justify-center;
+  }
+
+  .additional-images img {
+    @apply w-1/5 mr-4 rounded-lg border-gray-500 object-center bg-gray-200 opacity-100 hover:opacity-70 transition duration-300;
+  }
+
+  .product-details {
+    @apply flex-auto p-6 mt-4 md:mt-0;
+  }
+
+  /* .product-details p {
+    @apply w-full flex-none text-xs md:text-base font-medium text-slate-700 mt-1;
+  } */
+
+  .product-details h1 {
+    @apply text-base md:text-xl font-semibold text-slate-900 transition duration-100 ease-in-out hover:text-yellow-500 cursor-pointer;
+  }
+  .price-product {
+    @apply w-full text-base md:text-lg font-semibold text-slate-500  cursor-pointer;
+  }
+  .discount1 {
+    background-color: #e74c3c;
+    color: #fff;
+    border: none;
+    padding: 0px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    cursor: pointer;
+  }
+  .product-features {
+    @apply w-full flex-none text-xs md:text-sm font-light text-slate-700 mt-2;
+  }
+  .buy-button {
+    @apply flex-auto flex space-x-4 mb-4 text-xs md:text-sm font-medium mt-5;
+  }
+}
